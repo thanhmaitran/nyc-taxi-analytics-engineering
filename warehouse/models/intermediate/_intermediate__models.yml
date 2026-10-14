@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_trip_validated
+    description: >
+      Every staging row, with validation flags and a quarantine_reason. Rows are never dropped here.
+    columns:
+      - name: trip_record_key
+        data_tests:
+          - not_null
+          - unique
+      - name: is_valid
+        description: True when no quarantine rule fired.
+        data_tests:
+          - not_null
+
+  - name: int_trip_enriched
+    description: Valid trips with surrogate keys; unmapped zones use key -1.
+    columns:
+      - name: trip_record_key
+        data_tests:
+          - not_null
+          - unique
