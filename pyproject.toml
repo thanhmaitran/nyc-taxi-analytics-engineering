@@ -1,0 +1,23 @@
+[project]
+name = "analytics-engineering-data-warehouse"
+version = "1.0.0"
+description = "NYC TLC Yellow Taxi analytics engineering platform: Python + DuckDB + dbt"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "duckdb",
+    "pandas",
+    "pyarrow",
+    "PyYAML",
+    "dbt-core",
+    "dbt-duckdb",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "sqlfluff"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "scripts", "tests"]
+markers = ["integration: end-to-end tests that run dbt on synthetic fixtures"]

@@ -1,0 +1,25 @@
+[sqlfluff]
+dialect = duckdb
+templater = jinja
+max_line_length = 120
+exclude_rules = LT05, AM04, ST06, CV03
+
+[sqlfluff:templater:jinja]
+# Lightweight stand-ins for dbt functions so SQL lints without a live dbt project.
+load_macros_from_path = sqlfluff_stubs
+
+[sqlfluff:indentation]
+indent_unit = space
+tab_space_size = 4
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.types]
+extended_capitalisation_policy = lower

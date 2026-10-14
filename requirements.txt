@@ -1,0 +1,9 @@
+# Versions below are the ones this project was built and tested with (Python 3.13).
+duckdb==1.5.6
+pandas==3.0.6
+pyarrow==26.0.0
+PyYAML==6.0.3
+dbt-core==1.12.5
+dbt-duckdb==1.11.0
+sqlfluff==4.4.0
+pytest==9.1.1
