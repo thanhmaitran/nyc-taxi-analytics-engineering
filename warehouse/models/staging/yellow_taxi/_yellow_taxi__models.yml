@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_yellow_taxi
+    description: >
+      One row per source row. Renames and safely casts columns; never filters. A column that
+      does not exist in the source (e.g. cbd_congestion_fee before 2025) becomes NULL.
+    columns:
+      - name: trip_record_key
+        description: >
+          Technical key md5(file name : row number inside file). Not a TLC trip identifier.
+        data_tests:
+          - not_null
+          - unique
+      - name: source_file
+        description: Base name of the Parquet file the row came from.
+        data_tests:
+          - not_null
+      - name: source_period
+        description: YYYY-MM taken from the file name.
+        data_tests:
+          - not_null
+      - name: cbd_congestion_fee
+        description: Per-trip MTA Congestion Relief Zone charge, from 2025-01-05. NULL in earlier files.
