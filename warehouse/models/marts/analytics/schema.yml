@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: mart_daily_operations
+    description: "Grain: pickup date x pickup zone. Metrics follow docs/metric_definitions.md."
+    data_tests:
+      - dbt_utils_free_unique_grain:
+          arguments:
+            columns: [trip_date, pickup_zone_key]
+    columns:
+      - name: trip_count
+        data_tests:
+          - not_null
+
+  - name: mart_hourly_demand
+    description: "Grain: pickup date x hour."
+    data_tests:
+      - dbt_utils_free_unique_grain:
+          arguments:
+            columns: [trip_date, pickup_hour]
+
+  - name: mart_zone_performance
+    description: "Grain: month x pickup zone. Rank excludes the Unmapped zone."
+    data_tests:
+      - dbt_utils_free_unique_grain:
+          arguments:
+            columns: [trip_month, pickup_zone_key]
+
+  - name: mart_quality_reconciliation
+    description: "Grain: one row per source file. Reconciles source, valid, quarantined and fact row counts."
+    columns:
+      - name: source_file
+        data_tests:
+          - not_null
+          - unique
