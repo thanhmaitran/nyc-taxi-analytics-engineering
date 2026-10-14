@@ -1,0 +1,9 @@
+# No secrets here: DuckDB is a local file. Override the path with DBT_DUCKDB_PATH (CI, tests, benchmarks).
+analytics_engineering_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DBT_DUCKDB_PATH', '../data/warehouse.duckdb') }}"
+      schema: main
+      threads: 4
