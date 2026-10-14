@@ -1,0 +1,452 @@
+{
+  "label": "synthetic-dry-run",
+  "generated_at_utc": "2026-10-14T13:51:50.664173+00:00",
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_count": 2,
+    "ram_gb": 8.4,
+    "packages": {
+      "duckdb": "1.5.6",
+      "pyarrow": "26.0.0",
+      "dbt-core": "1.12.5",
+      "dbt-duckdb": "1.11.0",
+      "sqlfluff": "4.4.0"
+    },
+    "commit": null
+  },
+  "command": "python scripts/verify_real_data.py --label synthetic-dry-run --raw-dir /tmp/claude-0/-home-claude/7ae2887b-d306-5fb7-ad18-ae903d7842c8/scratchpad/dry/raw --work-dir /tmp/claude-0/-home-claude/7ae2887b-d306-5fb7-ad18-ae903d7842c8/scratchpad/dry/work --docs-dir /tmp/claude-0/-home-claude/7ae2887b-d306-5fb7-ad18-ae903d7842c8/scratchpad/dry/docs --bench-files 3",
+  "audit": {
+    "generated_at_utc": "2026-10-14T13:51:50.923669+00:00",
+    "file_count": 4,
+    "total_bytes": 319863,
+    "duplicate_periods": {},
+    "missing_periods": [],
+    "zone_lookup": {
+      "status": "ok",
+      "columns": [
+        "LocationID",
+        "Borough",
+        "Zone",
+        "service_zone"
+      ]
+    },
+    "status_counts": {
+      "ok": 4
+    },
+    "changed_checksums": [],
+    "schema_drift": [
+      {
+        "from": "2024-12",
+        "to": "2025-01",
+        "changes": [
+          {
+            "change": "added_column",
+            "column": "cbd_congestion_fee",
+            "to": "double"
+          }
+        ]
+      }
+    ],
+    "schema_findings": [],
+    "blocking": false,
+    "files": [
+      {
+        "file_name": "yellow_tripdata_2024-11.parquet",
+        "period": "2024-11",
+        "size_bytes": 79832,
+        "status": "ok",
+        "row_count": 2000,
+        "sha256": "ff557830f4ab32b82c7a1457cbe4dd4eb03f63bbf8185a7cbf62e705333aef00",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-12.parquet",
+        "period": "2024-12",
+        "size_bytes": 79558,
+        "status": "ok",
+        "row_count": 2000,
+        "sha256": "16a582e962a9d3c649694164bbb4c9ceea5cfd2d13050fa1a7cc35dbab7c32b2",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-01.parquet",
+        "period": "2025-01",
+        "size_bytes": 80174,
+        "status": "ok",
+        "row_count": 2000,
+        "sha256": "4d2fcac420f3b132e2558fb1342684ad12451035647def27e2e2d159ed831fbe",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-02.parquet",
+        "period": "2025-02",
+        "size_bytes": 80299,
+        "status": "ok",
+        "row_count": 2000,
+        "sha256": "7a4857a4cebfae299728a2d2c5554a6fbda316e52681571dff907ccb7b57a432",
+        "error": null
+      }
+    ]
+  },
+  "build": {
+    "dbt_seconds": 12.92,
+    "dbt_tests": {
+      "pass": 52,
+      "warn": 2,
+      "error": 0,
+      "skip": 0,
+      "no-op": 0,
+      "reused": 0,
+      "total": 54,
+      "returncode": 0
+    },
+    "db_size_bytes": 3420160
+  },
+  "quality": {
+    "layers": {
+      "raw_view": 8000,
+      "stg_yellow_taxi": 8000,
+      "int_trip_validated": 8000,
+      "valid": 7992,
+      "quarantine_trips": 8,
+      "fact_trips": 7992
+    },
+    "checks": {
+      "raw_view_rows == sum(parquet metadata rows)": true,
+      "raw == staging": true,
+      "staging == validated": true,
+      "validated == valid + quarantine": true,
+      "valid == fact": true,
+      "per-file parquet rows == per-file source rows": true
+    },
+    "per_file": [
+      {
+        "source_file": "yellow_tripdata_2024-11.parquet",
+        "source_period": "2024-11",
+        "source_rows": 2000,
+        "valid_rows": 1998.0,
+        "quarantined_rows": 2.0,
+        "fact_rows": 1998,
+        "unmapped_pickup_rows": 1.0,
+        "negative_distance_rows": 1.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.1,
+        "parquet_metadata_rows": 2000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-12.parquet",
+        "source_period": "2024-12",
+        "source_rows": 2000,
+        "valid_rows": 1998.0,
+        "quarantined_rows": 2.0,
+        "fact_rows": 1998,
+        "unmapped_pickup_rows": 1.0,
+        "negative_distance_rows": 1.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.1,
+        "parquet_metadata_rows": 2000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-01.parquet",
+        "source_period": "2025-01",
+        "source_rows": 2000,
+        "valid_rows": 1998.0,
+        "quarantined_rows": 2.0,
+        "fact_rows": 1998,
+        "unmapped_pickup_rows": 1.0,
+        "negative_distance_rows": 1.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.1,
+        "parquet_metadata_rows": 2000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-02.parquet",
+        "source_period": "2025-02",
+        "source_rows": 2000,
+        "valid_rows": 1998.0,
+        "quarantined_rows": 2.0,
+        "fact_rows": 1998,
+        "unmapped_pickup_rows": 1.0,
+        "negative_distance_rows": 1.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.1,
+        "parquet_metadata_rows": 2000
+      }
+    ],
+    "quarantine_reasons": [
+      {
+        "quarantine_reason": "dropoff_before_pickup",
+        "n": 4
+      },
+      {
+        "quarantine_reason": "missing_pickup_timestamp",
+        "n": 4
+      }
+    ],
+    "by_year": [
+      {
+        "year": "2024",
+        "source_rows": 4000.0,
+        "quarantined": 4.0,
+        "unmapped_pickup": 2.0,
+        "negative_fare": 0.0,
+        "negative_distance": 2.0
+      },
+      {
+        "year": "2025",
+        "source_rows": 4000.0,
+        "quarantined": 4.0,
+        "unmapped_pickup": 2.0,
+        "negative_fare": 0.0,
+        "negative_distance": 2.0
+      }
+    ],
+    "cbd_fee_coverage": [
+      {
+        "year": "2024",
+        "rows": 3996,
+        "non_null_cbd": 0
+      },
+      {
+        "year": "2025",
+        "rows": 3996,
+        "non_null_cbd": 3996
+      }
+    ],
+    "pickup_range": {
+      "min_pickup": "2024-11-01 02:15:00",
+      "max_pickup": "2025-02-27 23:51:00"
+    }
+  },
+  "benchmark": {
+    "generated_at_utc": "2026-10-14T13:52:31.674819+00:00",
+    "commit": null,
+    "scope": {
+      "source_dir": "raw",
+      "files": [
+        "yellow_tripdata_2024-12.parquet",
+        "yellow_tripdata_2025-01.parquet",
+        "yellow_tripdata_2025-02.parquet"
+      ],
+      "initial": [
+        "yellow_tripdata_2024-12.parquet",
+        "yellow_tripdata_2025-01.parquet"
+      ],
+      "added_incrementally": [
+        "yellow_tripdata_2025-02.parquet"
+      ]
+    },
+    "environment": {
+      "python": "3.13.16",
+      "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+      "cpu_count": 2
+    },
+    "runs": [
+      {
+        "label": "A_full_refresh_all",
+        "mode": "full_refresh",
+        "raw_rows_visible": 6000,
+        "raw_files": 3,
+        "build_raw_seconds": 0.027,
+        "dbt_seconds": 7.537,
+        "wall_seconds": 7.564,
+        "db_size_bytes": 3158016,
+        "output_rows": {
+          "fact_trips": 5994,
+          "quarantine_trips": 6,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 1925,
+          "mart_daily_operations": 5179,
+          "mart_hourly_demand": 1854,
+          "mart_zone_performance": 791,
+          "mart_quality_reconciliation": 3
+        },
+        "dbt_tests": {
+          "pass": 52,
+          "warn": 2,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 54,
+          "returncode": 0
+        }
+      },
+      {
+        "label": "B1_initial_load",
+        "mode": "full_refresh",
+        "raw_rows_visible": 4000,
+        "raw_files": 2,
+        "build_raw_seconds": 0.03,
+        "dbt_seconds": 7.435,
+        "wall_seconds": 7.465,
+        "db_size_bytes": 3158016,
+        "output_rows": {
+          "fact_trips": 3996,
+          "quarantine_trips": 4,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 1283,
+          "mart_daily_operations": 3445,
+          "mart_hourly_demand": 1229,
+          "mart_zone_performance": 527,
+          "mart_quality_reconciliation": 2
+        },
+        "dbt_tests": {
+          "pass": 52,
+          "warn": 2,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 54,
+          "returncode": 0
+        }
+      },
+      {
+        "label": "B2_incremental_add_new",
+        "mode": "incremental",
+        "raw_rows_visible": 6000,
+        "raw_files": 3,
+        "build_raw_seconds": 0.026,
+        "dbt_seconds": 5.732,
+        "wall_seconds": 5.757,
+        "db_size_bytes": 6041600,
+        "output_rows": {
+          "fact_trips": 5994,
+          "quarantine_trips": 6,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 1925,
+          "mart_daily_operations": 5179,
+          "mart_hourly_demand": 1854,
+          "mart_zone_performance": 791,
+          "mart_quality_reconciliation": 3
+        },
+        "dbt_tests": {
+          "pass": 52,
+          "warn": 2,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 54,
+          "returncode": 0
+        }
+      },
+      {
+        "label": "C_incremental_replay",
+        "mode": "incremental",
+        "raw_rows_visible": 6000,
+        "raw_files": 3,
+        "build_raw_seconds": 0.023,
+        "dbt_seconds": 6.266,
+        "wall_seconds": 6.289,
+        "db_size_bytes": 6565888,
+        "output_rows": {
+          "fact_trips": 5994,
+          "quarantine_trips": 6,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 1925,
+          "mart_daily_operations": 5179,
+          "mart_hourly_demand": 1854,
+          "mart_zone_performance": 791,
+          "mart_quality_reconciliation": 3
+        },
+        "dbt_tests": {
+          "pass": 52,
+          "warn": 2,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 54,
+          "returncode": 0
+        }
+      }
+    ],
+    "replay_idempotent": true,
+    "equivalent_to_full_refresh": true,
+    "equivalence_detail": {
+      "fact_trips": {
+        "rows_a": 5994,
+        "rows_b": 5994,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "quarantine_trips": {
+        "rows_a": 6,
+        "rows_b": 6,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_zone": {
+        "rows_a": 266,
+        "rows_b": 266,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_payment_type": {
+        "rows_a": 8,
+        "rows_b": 8,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_datetime": {
+        "rows_a": 1925,
+        "rows_b": 1925,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_daily_operations": {
+        "rows_a": 5179,
+        "rows_b": 5179,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_hourly_demand": {
+        "rows_a": 1854,
+        "rows_b": 1854,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_zone_performance": {
+        "rows_a": 791,
+        "rows_b": 791,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_quality_reconciliation": {
+        "rows_a": 3,
+        "rows_b": 3,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      }
+    }
+  }
+}
