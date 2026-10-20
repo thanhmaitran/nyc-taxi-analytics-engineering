@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: fact_trips
+    description: >
+      One row per source row retained after the published validation and deduplication rules.
+      Grain is a source record, not a verified real-world taxi trip.
+    columns:
+      - name: trip_record_key
+        description: >
+          Technical source-row identifier (source file + row number). Uniqueness is tested table-wide
+          here only when var full_table_unique_tests is true (default, fine for small data); the
+          file-by-file loader tests it per file instead because the table-wide test runs out of memory
+          at ~200M rows (ADR 0004).
+        data_tests:
+          - not_null
+          - unique:
+              config:
+                enabled: "{{ var('full_table_unique_tests', true) }}"
+      - name: pickup_datetime_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_datetime')
+                field: datetime_key
+      - name: pickup_zone_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_zone')
+                field: zone_key
+      - name: dropoff_zone_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_zone')
+                field: zone_key
+      - name: payment_type_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_payment_type')
+                field: payment_type_key
+              config:
+                severity: warn
+
+  - name: dim_zone
+    description: Taxi zones from the official lookup plus an explicit Unmapped member (key -1).
+    columns:
+      - name: zone_key
+        data_tests:
+          - not_null
+          - unique
+      - name: location_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_payment_type
+    description: Payment codes as documented in the TLC data dictionary.
+    columns:
+      - name: payment_type_key
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_datetime
+    description: Hour-grain calendar built from hours present in valid trips.
+    columns:
+      - name: datetime_key
+        description: YYYYMMDDHH integer.
+        data_tests:
+          - not_null
+          - unique
+
+  - name: quarantine_trips
+    description: Rows rejected by quarantine-level rules, with the reason.
+    columns:
+      - name: trip_record_key
+        data_tests:
+          - not_null
+          - unique:
+              config:
+                enabled: "{{ var('full_table_unique_tests', true) }}"
+      - name: quarantine_reason
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - missing_pickup_timestamp
+                  - missing_dropoff_timestamp
+                  - dropoff_before_pickup
+                  - pickup_outside_file_period
+                  - exact_duplicate_row
