@@ -1,0 +1,14 @@
+# No secrets here: DuckDB is a local file.
+# scripts/pipeline_lib.py sets these env vars from the detected RAM; the defaults below apply when dbt is run directly.
+analytics_engineering_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DBT_DUCKDB_PATH', '../data/warehouse.duckdb') }}"
+      schema: main
+      threads: "{{ env_var('DBT_THREADS', '4') | as_number }}"
+      settings:
+        memory_limit: "{{ env_var('DBT_DUCKDB_MEMORY_LIMIT', '8GB') }}"
+        temp_directory: "{{ env_var('DBT_DUCKDB_TEMP', '../data/duckdb_tmp') }}"
+        preserve_insertion_order: false   # lets DuckDB stream large scans instead of buffering order
