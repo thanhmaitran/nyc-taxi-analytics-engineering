@@ -1,0 +1,923 @@
+{
+  "generated_at_utc": "2026-10-20T21:12:56.807039+00:00",
+  "file_count": 56,
+  "total_bytes": 3285269895,
+  "duplicate_periods": {},
+  "missing_periods": [],
+  "zone_lookup": {
+    "status": "ok",
+    "columns": [
+      "LocationID",
+      "Borough",
+      "Zone",
+      "service_zone"
+    ]
+  },
+  "status_counts": {
+    "ok": 56
+  },
+  "changed_checksums": [],
+  "schema_drift": [
+    {
+      "from": "2023-01",
+      "to": "2023-02",
+      "changes": [
+        {
+          "change": "renamed_case",
+          "column": "Airport_fee",
+          "from": "airport_fee",
+          "to": "Airport_fee"
+        },
+        {
+          "change": "type_changed",
+          "column": "DOLocationID",
+          "from": "int64",
+          "to": "int32"
+        },
+        {
+          "change": "type_changed",
+          "column": "passenger_count",
+          "from": "double",
+          "to": "int64"
+        },
+        {
+          "change": "type_changed",
+          "column": "PULocationID",
+          "from": "int64",
+          "to": "int32"
+        },
+        {
+          "change": "type_changed",
+          "column": "RatecodeID",
+          "from": "double",
+          "to": "int64"
+        },
+        {
+          "change": "type_changed",
+          "column": "store_and_fwd_flag",
+          "from": "string",
+          "to": "large_string"
+        },
+        {
+          "change": "type_changed",
+          "column": "VendorID",
+          "from": "int64",
+          "to": "int32"
+        }
+      ]
+    },
+    {
+      "from": "2024-12",
+      "to": "2025-01",
+      "changes": [
+        {
+          "change": "added_column",
+          "column": "cbd_congestion_fee",
+          "to": "double"
+        }
+      ]
+    },
+    {
+      "from": "2026-05",
+      "to": "2026-06",
+      "changes": [
+        {
+          "change": "added_column",
+          "column": "request_source",
+          "to": "large_string"
+        }
+      ]
+    }
+  ],
+  "schema_findings": [
+    {
+      "file": "yellow_tripdata_2023-02.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-03.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-04.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-05.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-06.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-07.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-08.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-09.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-10.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-11.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2023-12.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-01.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-02.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-03.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-04.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-05.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-06.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-07.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-08.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-09.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-10.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-11.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2024-12.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-01.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-02.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-03.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-04.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-05.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-06.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-07.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-08.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-09.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-10.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-11.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2025-12.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-01.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-02.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-03.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-04.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-05.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-06.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-06.parquet",
+      "kind": "unknown_column",
+      "column": "request_source",
+      "severity": "warning",
+      "detail": "column not in data dictionary"
+    },
+    {
+      "file": "yellow_tripdata_2026-07.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-07.parquet",
+      "kind": "unknown_column",
+      "column": "request_source",
+      "severity": "warning",
+      "detail": "column not in data dictionary"
+    },
+    {
+      "file": "yellow_tripdata_2026-08.parquet",
+      "kind": "column_case_variant",
+      "column": "Airport_fee",
+      "severity": "warning",
+      "detail": "documented column with different capitalisation"
+    },
+    {
+      "file": "yellow_tripdata_2026-08.parquet",
+      "kind": "unknown_column",
+      "column": "request_source",
+      "severity": "warning",
+      "detail": "column not in data dictionary"
+    }
+  ],
+  "blocking": false,
+  "files": [
+    {
+      "file_name": "yellow_tripdata_2022-01.parquet",
+      "period": "2022-01",
+      "size_bytes": 38139949,
+      "status": "ok",
+      "row_count": 2463931,
+      "sha256": "797d6f008e67c3e3371b7f957ab97dbc2b38a9fb0ac083cb5eae4b0297b32372",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-02.parquet",
+      "period": "2022-02",
+      "size_bytes": 45616512,
+      "status": "ok",
+      "row_count": 2979431,
+      "sha256": "9905ead83ac16ae4a2915cb44ab1edb9c53eb3ac5a77a71f2a2e3ba18d59efb4",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-03.parquet",
+      "period": "2022-03",
+      "size_bytes": 55682369,
+      "status": "ok",
+      "row_count": 3627882,
+      "sha256": "b8b63566178c65da758cc292338ebc308534eb57607085fc67b2c939ae6035e3",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-04.parquet",
+      "period": "2022-04",
+      "size_bytes": 55222692,
+      "status": "ok",
+      "row_count": 3599920,
+      "sha256": "8c4162f28244098bd40f150f5f639cc1f41673e0f0df47e6399d7d374c224049",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-05.parquet",
+      "period": "2022-05",
+      "size_bytes": 55558821,
+      "status": "ok",
+      "row_count": 3588295,
+      "sha256": "6946b56ee057b72dced2204e0c10f2be2e1b7358c5b2c2943f88d2310089c43c",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-06.parquet",
+      "period": "2022-06",
+      "size_bytes": 55365184,
+      "status": "ok",
+      "row_count": 3558124,
+      "sha256": "a08f27ea544a500a6e10637605e5906e246e2836435ba1c05a3a3521faf42389",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-07.parquet",
+      "period": "2022-07",
+      "size_bytes": 49367712,
+      "status": "ok",
+      "row_count": 3174394,
+      "sha256": "5aa3c2a9deb55f09527e76e6f94a8185a4a04cd6361c8082ff6d6e64ab817d5b",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-08.parquet",
+      "period": "2022-08",
+      "size_bytes": 49717159,
+      "status": "ok",
+      "row_count": 3152677,
+      "sha256": "7c2d8f6ad71d3b0e432a77553224ea69f473d0b8bdff24a5b11d289ac5388536",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-09.parquet",
+      "period": "2022-09",
+      "size_bytes": 49619957,
+      "status": "ok",
+      "row_count": 3183767,
+      "sha256": "1ce6af91b4eb1583d3e710fec414c0aedddec96517b309506e7d12c3de72bb02",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-10.parquet",
+      "period": "2022-10",
+      "size_bytes": 57061938,
+      "status": "ok",
+      "row_count": 3675411,
+      "sha256": "3f3cab00e7d236735d3ab227e54ffe48fd28b0afbb30ae90d843d7a065a3ae69",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-11.parquet",
+      "period": "2022-11",
+      "size_bytes": 50106631,
+      "status": "ok",
+      "row_count": 3252717,
+      "sha256": "bf9fc6cd403320f2d00c2672fe1d4d58594c56ed7f64ab9bc7021d4c12bb543c",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2022-12.parquet",
+      "period": "2022-12",
+      "size_bytes": 53640739,
+      "status": "ok",
+      "row_count": 3399549,
+      "sha256": "4a9a69306bd36547b2eed3ecfa7365b53c2872f45b9647834dbd5166dee93708",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-01.parquet",
+      "period": "2023-01",
+      "size_bytes": 47673370,
+      "status": "ok",
+      "row_count": 3066766,
+      "sha256": "32df6f67578fa86c484a6b5ef23a5281992ff085521082340b0f9e5889e9a572",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-02.parquet",
+      "period": "2023-02",
+      "size_bytes": 47748012,
+      "status": "ok",
+      "row_count": 2913955,
+      "sha256": "4809e6aaac64f05a62d16a25d55713be1537ad64fc261e895eaf2d2120fe750a",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-03.parquet",
+      "period": "2023-03",
+      "size_bytes": 56127762,
+      "status": "ok",
+      "row_count": 3403766,
+      "sha256": "e7d44943111b007bf0e7084863511886e0db29f862f9a96239383a1f86c6c26e",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-04.parquet",
+      "period": "2023-04",
+      "size_bytes": 54222699,
+      "status": "ok",
+      "row_count": 3288250,
+      "sha256": "95c01c53c865e06489179bdecce3a59603697a1557c4d5d183c20ae13a144dc6",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-05.parquet",
+      "period": "2023-05",
+      "size_bytes": 58654627,
+      "status": "ok",
+      "row_count": 3513649,
+      "sha256": "9bd7d1c557bb9d0413619ba296b4828b884852a70bd07f2230b83f080d9a8591",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-06.parquet",
+      "period": "2023-06",
+      "size_bytes": 54999465,
+      "status": "ok",
+      "row_count": 3307234,
+      "sha256": "3e60e29b5df45683948b68acbfb503aa459d14162c610622585c6580fdbfc73a",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-07.parquet",
+      "period": "2023-07",
+      "size_bytes": 48361828,
+      "status": "ok",
+      "row_count": 2907108,
+      "sha256": "98504ae351d920e9e0b61241f5707f90ee1588cfb199c378459234b5035805ab",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-08.parquet",
+      "period": "2023-08",
+      "size_bytes": 48152353,
+      "status": "ok",
+      "row_count": 2824209,
+      "sha256": "84ce36a2f84fa14c12fd976c79a7d4f30c871f1782b08ca7c27bb76ab946e66b",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-09.parquet",
+      "period": "2023-09",
+      "size_bytes": 47895515,
+      "status": "ok",
+      "row_count": 2846722,
+      "sha256": "091bf156bea5bb10bd217f5f12375f966f8789349af45d5ee4153e3e1e077a87",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-10.parquet",
+      "period": "2023-10",
+      "size_bytes": 59009059,
+      "status": "ok",
+      "row_count": 3522285,
+      "sha256": "dc5f069476d350df802ed8120f3b39ec321c34cfa905381e87f608c78ca0c645",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-11.parquet",
+      "period": "2023-11",
+      "size_bytes": 56094653,
+      "status": "ok",
+      "row_count": 3339715,
+      "sha256": "af203de0e73a92d640121f02a34326f25037d62380fc406237c87c2a4231ae58",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2023-12.parquet",
+      "period": "2023-12",
+      "size_bytes": 56804275,
+      "status": "ok",
+      "row_count": 3376567,
+      "sha256": "ab4f4db11cb31484747f62eb507c13fcfaff290aaf59c13e6465dea0b1166b9c",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-01.parquet",
+      "period": "2024-01",
+      "size_bytes": 49961641,
+      "status": "ok",
+      "row_count": 2964624,
+      "sha256": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-02.parquet",
+      "period": "2024-02",
+      "size_bytes": 50349284,
+      "status": "ok",
+      "row_count": 3007526,
+      "sha256": "c76c43c18c6c6664080dd920baab4928988d5786a6b65980792ca7cd796f9f20",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-03.parquet",
+      "period": "2024-03",
+      "size_bytes": 60078280,
+      "status": "ok",
+      "row_count": 3582628,
+      "sha256": "2d4cdc8fb96726cdd3803b13b02d2e61e71d45720aff0ebc693a8bdd1f249823",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-04.parquet",
+      "period": "2024-04",
+      "size_bytes": 59133625,
+      "status": "ok",
+      "row_count": 3514289,
+      "sha256": "ce37f736c7cf9e92164c850ef2b502a8f7bb590fc1804b6edbcb80293da01b89",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-05.parquet",
+      "period": "2024-05",
+      "size_bytes": 62553128,
+      "status": "ok",
+      "row_count": 3723833,
+      "sha256": "1974230be2b5a3ea92e47b5eb77f32dbf1de896d81ad8df4ab6faba52749ad23",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-06.parquet",
+      "period": "2024-06",
+      "size_bytes": 59859922,
+      "status": "ok",
+      "row_count": 3539193,
+      "sha256": "677cf14c8347f745b583f012fbdba072334c6c4efa17bfd6a64369f2ba30329c",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-07.parquet",
+      "period": "2024-07",
+      "size_bytes": 52299432,
+      "status": "ok",
+      "row_count": 3076903,
+      "sha256": "af12d6b04daeb78550799ae99933d495b27d715b6dbb0fad9bb750a4537d3070",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-08.parquet",
+      "period": "2024-08",
+      "size_bytes": 51067350,
+      "status": "ok",
+      "row_count": 2979183,
+      "sha256": "7315643dd16bafc03e27d9903edbfd35404c2550a695d0da0a3e73852d940cfb",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-09.parquet",
+      "period": "2024-09",
+      "size_bytes": 61170186,
+      "status": "ok",
+      "row_count": 3633030,
+      "sha256": "2f42e4a383a6635de803001462848d0aee2b47f6ce899126805d2d05361fb843",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-10.parquet",
+      "period": "2024-10",
+      "size_bytes": 64346071,
+      "status": "ok",
+      "row_count": 3833771,
+      "sha256": "d19fe05aa0b259af24eb47051735293287f1e6dc263ba04030ec1ab4c6ec2650",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-11.parquet",
+      "period": "2024-11",
+      "size_bytes": 60658709,
+      "status": "ok",
+      "row_count": 3646369,
+      "sha256": "5ef321876de5007a7c147a347389133fc94fd7ac28f82eb1d57d8f2cf05cfd3b",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2024-12.parquet",
+      "period": "2024-12",
+      "size_bytes": 61524085,
+      "status": "ok",
+      "row_count": 3668371,
+      "sha256": "41ebf7db80bebde60c58e5143c14cdf38ad04a0f3e3ff44215b3e240d55f6c78",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-01.parquet",
+      "period": "2025-01",
+      "size_bytes": 59158238,
+      "status": "ok",
+      "row_count": 3475226,
+      "sha256": "9af277e4c0d3f9deb30644da822981e1e7df6af58313170fd3aa8a474485488a",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-02.parquet",
+      "period": "2025-02",
+      "size_bytes": 60343086,
+      "status": "ok",
+      "row_count": 3577543,
+      "sha256": "037cba555a73663f3a51a2c27816e40e3feb364769942bdf122b9da31e377bd3",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-03.parquet",
+      "period": "2025-03",
+      "size_bytes": 69964745,
+      "status": "ok",
+      "row_count": 4145257,
+      "sha256": "20c4b77cce457b7cfdae77c5069ca7dc91c167f876a41467f4502ab69487a186",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-04.parquet",
+      "period": "2025-04",
+      "size_bytes": 67352824,
+      "status": "ok",
+      "row_count": 3970553,
+      "sha256": "6f98938de9380a3f85600533816f0dc0e6d9b5b210e485d623952bac599bbe28",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-05.parquet",
+      "period": "2025-05",
+      "size_bytes": 77837865,
+      "status": "ok",
+      "row_count": 4591845,
+      "sha256": "7ef46bcd0fceee7f8c0bb38a532be05bceefabb512d4bb0b32a7727dd862b15c",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-06.parquet",
+      "period": "2025-06",
+      "size_bytes": 73542954,
+      "status": "ok",
+      "row_count": 4322960,
+      "sha256": "1bea7f5b09c744414451fa7fef09fbc5a393ffb1621c859be6ba0df23a14e1b6",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-07.parquet",
+      "period": "2025-07",
+      "size_bytes": 66943728,
+      "status": "ok",
+      "row_count": 3898963,
+      "sha256": "1efa6a0458dc60341f7f81dcbb5015af731f42d1a109f4e0d594dd46970fd4ef",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-08.parquet",
+      "period": "2025-08",
+      "size_bytes": 62293743,
+      "status": "ok",
+      "row_count": 3574091,
+      "sha256": "b982ace703e3564d92e94edae5ec93515f4f1fb07a5b95e7404c32464c1a6a89",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-09.parquet",
+      "period": "2025-09",
+      "size_bytes": 72432945,
+      "status": "ok",
+      "row_count": 4251015,
+      "sha256": "cd39b9901f01d1fd752d45cbaec91ee5f68c4dddf9e261e938c1dbab404644c7",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-10.parquet",
+      "period": "2025-10",
+      "size_bytes": 75267589,
+      "status": "ok",
+      "row_count": 4428699,
+      "sha256": "e1f63caf331bc6230d9c6f757cb88e55fdc2bddde185fb414d2c947abdc773c3",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-11.parquet",
+      "period": "2025-11",
+      "size_bytes": 71134255,
+      "status": "ok",
+      "row_count": 4181444,
+      "sha256": "2cf2f3127f96d4d5dea30f8afe05119cf8e4ba57bd9e60b789d3f296fc8459ab",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2025-12.parquet",
+      "period": "2025-12",
+      "size_bytes": 73701327,
+      "status": "ok",
+      "row_count": 4305006,
+      "sha256": "eaba7ff61ebb6453fc6f673fda43d621380307f869b768b124992e8486c785e1",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2026-01.parquet",
+      "period": "2026-01",
+      "size_bytes": 64165080,
+      "status": "ok",
+      "row_count": 3724889,
+      "sha256": "8b3933fe6f0d7b6d8826613c0dd724edc680ff7c49e2bd4c7635c05102728637",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2026-02.parquet",
+      "period": "2026-02",
+      "size_bytes": 58683353,
+      "status": "ok",
+      "row_count": 3399866,
+      "sha256": "5352ca800f29c40a221ed5b0c6392c451fde7fcd236a73651bd5aea74713a26c",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2026-03.parquet",
+      "period": "2026-03",
+      "size_bytes": 67891249,
+      "status": "ok",
+      "row_count": 3952451,
+      "sha256": "d7af794a7ac06cbbb5afb4d1df9e86d84f2e878584de708ff2ffca4bd7d234d9",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2026-04.parquet",
+      "period": "2026-04",
+      "size_bytes": 64818115,
+      "status": "ok",
+      "row_count": 3831240,
+      "sha256": "e03b82d5722a6b21d4fbce011afd8837495202c0b5db77ff0d8d15dd80834ba8",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2026-05.parquet",
+      "period": "2026-05",
+      "size_bytes": 69699174,
+      "status": "ok",
+      "row_count": 4090836,
+      "sha256": "9aa5a1609e2bf07d9051b7d530de05b1019e12a560ecb2c59c137c8b3a8b6750",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2026-06.parquet",
+      "period": "2026-06",
+      "size_bytes": 65465637,
+      "status": "ok",
+      "row_count": 3837248,
+      "sha256": "f340c62a18885c56176433c9db28e97d0a8a14e6e49869276ad8afb20ebf088b",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2026-07.parquet",
+      "period": "2026-07",
+      "size_bytes": 61685033,
+      "status": "ok",
+      "row_count": 3530109,
+      "sha256": "3260bb629c2f334055f8a566cbb02c15476b15120c45d7ad0aae46fc4bb06612",
+      "error": null
+    },
+    {
+      "file_name": "yellow_tripdata_2026-08.parquet",
+      "period": "2026-08",
+      "size_bytes": 59043961,
+      "status": "ok",
+      "row_count": 3336716,
+      "sha256": "6683a025443afcbb28ac4f238fcbb6334767dc69fab4a16b1eb16a78dcd013cd",
+      "error": null
+    }
+  ]
+}
