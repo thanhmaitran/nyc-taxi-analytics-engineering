@@ -1,0 +1,15 @@
+version: 2
+
+# No data tests on these two views on purpose: any test over them re-runs the validation window over every
+# source row (197M on the full history). Their outputs are tested where they are stored: fact_trips,
+# quarantine_trips and mart_quality_reconciliation (tests/assert_reconciliation_balances.sql).
+models:
+  - name: int_trip_validated
+    description: >
+      Every staging row, with validation flags and a quarantine_reason. Rows are never dropped here.
+    columns:
+      - name: is_valid
+        description: True when no quarantine rule fired.
+
+  - name: int_trip_enriched
+    description: Valid trips with surrogate keys; unmapped zones use key -1.
