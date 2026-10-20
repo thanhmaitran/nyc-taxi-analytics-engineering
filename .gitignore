@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Raw data (large, local only). The small public zone lookup is tracked via warehouse/seeds.
+data/raw/
+data/samples/private/
+
+# Local warehouse
+data/*.duckdb
+data/*.duckdb.wal
+
+# Generated manifests and local reports
+data/manifests/
+reports/*
+!reports/.gitkeep
+benchmarks/*
+!benchmarks/.gitkeep
+
+# dbt artifacts (warehouse/profiles.yml is tracked: it contains no secrets, only an env-var path)
+warehouse/target/
+warehouse/logs/
+warehouse/dbt_packages/
+
+# Generated documentation
+warehouse/docs/
+
+# Editor and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
