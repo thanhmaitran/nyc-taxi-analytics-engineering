@@ -1,0 +1,65 @@
+00:59:15 [B1] audit /tmp/claude-0/-home-claude/7ae2887b-d306-5fb7-ad18-ae903d7842c8/scratchpad/big/raw
+00:59:20      files=45 status={'ok': 45} gaps=[] drift_events=0 blocking=False
+00:59:20 [B2] full load, one monthly file at a time (duckdb memory_limit=2GB)
+00:59:48      [1/45] yellow_tripdata_2022-01.parquet  22.28s  ok
+01:00:14      [2/45] yellow_tripdata_2022-02.parquet  25.54s  ok
+01:00:41      [3/45] yellow_tripdata_2022-03.parquet  25.94s  ok
+01:01:08      [4/45] yellow_tripdata_2022-04.parquet  26.43s  ok
+01:01:36      [5/45] yellow_tripdata_2022-05.parquet  26.83s  ok
+01:02:03      [6/45] yellow_tripdata_2022-06.parquet  26.34s  ok
+01:02:30      [7/45] yellow_tripdata_2022-07.parquet  26.63s  ok
+01:02:57      [8/45] yellow_tripdata_2022-08.parquet  25.82s  ok
+01:03:23      [9/45] yellow_tripdata_2022-09.parquet  26.21s  ok
+01:03:50      [10/45] yellow_tripdata_2022-10.parquet  25.63s  ok
+01:04:17      [11/45] yellow_tripdata_2022-11.parquet  26.37s  ok
+01:04:43      [12/45] yellow_tripdata_2022-12.parquet  25.59s  ok
+01:05:10      [13/45] yellow_tripdata_2023-01.parquet  25.65s  ok
+01:05:36      [14/45] yellow_tripdata_2023-02.parquet  25.41s  ok
+01:06:02      [15/45] yellow_tripdata_2023-03.parquet  25.72s  ok
+01:06:28      [16/45] yellow_tripdata_2023-04.parquet  25.12s  ok
+01:06:55      [17/45] yellow_tripdata_2023-05.parquet  26.43s  ok
+01:07:22      [18/45] yellow_tripdata_2023-06.parquet  26.06s  ok
+01:07:50      [19/45] yellow_tripdata_2023-07.parquet  26.5s  ok
+01:08:16      [20/45] yellow_tripdata_2023-08.parquet  25.7s  ok
+01:08:42      [21/45] yellow_tripdata_2023-09.parquet  25.14s  ok
+01:09:09      [22/45] yellow_tripdata_2023-10.parquet  25.74s  ok
+01:09:36      [23/45] yellow_tripdata_2023-11.parquet  25.93s  ok
+01:10:02      [24/45] yellow_tripdata_2023-12.parquet  25.74s  ok
+01:10:30      [25/45] yellow_tripdata_2024-01.parquet  26.68s  ok
+01:10:57      [26/45] yellow_tripdata_2024-02.parquet  26.47s  ok
+01:11:24      [27/45] yellow_tripdata_2024-03.parquet  26.31s  ok
+01:11:52      [28/45] yellow_tripdata_2024-04.parquet  26.22s  ok
+01:12:19      [29/45] yellow_tripdata_2024-05.parquet  26.18s  ok
+01:12:46      [30/45] yellow_tripdata_2024-06.parquet  26.33s  ok
+01:13:13      [31/45] yellow_tripdata_2024-07.parquet  25.84s  ok
+01:13:40      [32/45] yellow_tripdata_2024-08.parquet  25.72s  ok
+01:14:08      [33/45] yellow_tripdata_2024-09.parquet  26.77s  ok
+01:14:35      [34/45] yellow_tripdata_2024-10.parquet  26.28s  ok
+01:15:02      [35/45] yellow_tripdata_2024-11.parquet  25.78s  ok
+01:15:29      [36/45] yellow_tripdata_2024-12.parquet  26.54s  ok
+01:15:56      [37/45] yellow_tripdata_2025-01.parquet  26.03s  ok
+01:16:24      [38/45] yellow_tripdata_2025-02.parquet  26.28s  ok
+01:16:50      [39/45] yellow_tripdata_2025-03.parquet  25.7s  ok
+01:17:17      [40/45] yellow_tripdata_2025-04.parquet  25.49s  ok
+01:17:43      [41/45] yellow_tripdata_2025-05.parquet  25.38s  ok
+01:18:11      [42/45] yellow_tripdata_2025-06.parquet  26.16s  ok
+01:18:38      [43/45] yellow_tripdata_2025-07.parquet  26.46s  ok
+01:19:05      [44/45] yellow_tripdata_2025-08.parquet  25.81s  ok
+01:19:32      [45/45] yellow_tripdata_2025-09.parquet  25.64s  ok
+01:20:18      total 1257.57s {'pass': 358, 'warn': 0, 'error': 0, 'skip': 0, 'no-op': 0, 'reused': 0, 'total': 358, 'returncode': 0}
+01:20:18 [C] quality reconciliation
+01:20:18      PASS  raw view rows == sum of Parquet footers
+01:20:18      PASS  validation saw every source row
+01:20:18      PASS  per-file source rows == per-file Parquet footer rows
+01:20:18      PASS  source == valid + quarantined
+01:20:18      PASS  valid == fact_trips
+01:20:18      PASS  quarantined == quarantine_trips table
+01:20:18      PASS  trip_record_key unique within every file (fact and quarantine)
+01:20:18      PASS  every manifest file loaded
+01:20:18 [D] benchmark (last 6 files, 1 added incrementally)
+01:35:15      A_full_refresh_all         166.734s
+01:35:15      B1_initial_load            135.642s
+01:35:15      B2_incremental_add_new     155.702s
+01:35:15      C_incremental_replay       141.376s
+01:35:15      D_by_file_full_load        167.344s
+01:35:15      replay idempotent=True incremental==full=True

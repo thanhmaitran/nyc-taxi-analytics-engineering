@@ -1,0 +1,2795 @@
+{
+  "label": "synthetic-scale-225M",
+  "generated_at_utc": "2026-10-15T23:59:15.716552+00:00",
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_count": 2,
+    "ram_gb": 8.4,
+    "duckdb_memory_limit": "2GB",
+    "packages": {
+      "duckdb": "1.5.6",
+      "pyarrow": "26.0.0",
+      "dbt-core": "1.12.5",
+      "dbt-duckdb": "1.11.0",
+      "sqlfluff": "4.4.0"
+    },
+    "commit": null
+  },
+  "command": "python scripts/verify_real_data.py --label synthetic-scale-225M --raw-dir /tmp/claude-0/-home-claude/7ae2887b-d306-5fb7-ad18-ae903d7842c8/scratchpad/big/raw --work-dir /tmp/claude-0/-home-claude/7ae2887b-d306-5fb7-ad18-ae903d7842c8/scratchpad/big/work --docs-dir /tmp/claude-0/-home-claude/7ae2887b-d306-5fb7-ad18-ae903d7842c8/scratchpad/big/docs --bench-files 6 --fast-audit",
+  "audit": {
+    "generated_at_utc": "2026-10-15T23:59:20.467329+00:00",
+    "file_count": 45,
+    "total_bytes": 4893094128,
+    "duplicate_periods": {},
+    "missing_periods": [],
+    "zone_lookup": {
+      "status": "ok",
+      "columns": [
+        "LocationID",
+        "Borough",
+        "Zone",
+        "service_zone"
+      ]
+    },
+    "status_counts": {
+      "ok": 45
+    },
+    "changed_checksums": [],
+    "schema_drift": [],
+    "schema_findings": [
+      {
+        "file": "yellow_tripdata_2022-01.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-02.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-03.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-04.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-05.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-06.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-07.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-08.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-09.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-10.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-11.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2022-12.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-01.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-02.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-03.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-04.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-05.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-06.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-07.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-08.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-09.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-10.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-11.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-12.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-01.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-02.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-03.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-04.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-05.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-06.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-07.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-08.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-09.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-10.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-11.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-12.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-01.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-02.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-03.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-04.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-05.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-06.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-07.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-08.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-09.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      }
+    ],
+    "blocking": false,
+    "files": [
+      {
+        "file_name": "yellow_tripdata_2022-01.parquet",
+        "period": "2022-01",
+        "size_bytes": 108730654,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "8c5529bcd814133978e4763062f8dcf912386da8e11b43a24c5452ac9c6f1bed",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-02.parquet",
+        "period": "2022-02",
+        "size_bytes": 108755651,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "7863fb104ea8c2d366d02e385896b4fccc837ce2b8ce9edeb87044c7c2851970",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-03.parquet",
+        "period": "2022-03",
+        "size_bytes": 108727491,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "3ea7acd20c379c84d2315b28e3b5cc235bbec3c5bd3b6b5934a60ed573b02154",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-04.parquet",
+        "period": "2022-04",
+        "size_bytes": 108725621,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "f4579e27f31e5b18b76fc6b31af395c09403211779d20714dbc952f70b09bb07",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-05.parquet",
+        "period": "2022-05",
+        "size_bytes": 108756722,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "11a3061a843d5d6804a55965c9a75b989faddba717a5077454a9765cbce7951f",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-06.parquet",
+        "period": "2022-06",
+        "size_bytes": 108728759,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "b512a083922c1e7e0a4dc873c203abe4994e1c94032cec2f4e0a8ad8f3ae637e",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-07.parquet",
+        "period": "2022-07",
+        "size_bytes": 108730405,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "4f363d656ec668c10872e703bd8011777abaac2de06148c14d2da56cc103a88f",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-08.parquet",
+        "period": "2022-08",
+        "size_bytes": 108730686,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "8e760b833cbd986e6fe3a9fc7c9334f88a4ca2e91fcbcdb379385c1373cdf884",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-09.parquet",
+        "period": "2022-09",
+        "size_bytes": 108735219,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "e04aca48037d4830a8692c0065c33a9e3f92dd65476c972c1726131446d7a618",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-10.parquet",
+        "period": "2022-10",
+        "size_bytes": 108752652,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "001814d30a731a9bb3a8075c72c294b90068eb02f035cc0f114a446f48d4d1c1",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-11.parquet",
+        "period": "2022-11",
+        "size_bytes": 108730382,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "8301a5c47b5bc81ea70218a00285dcf918d838c9ea41063192f1994517511548",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-12.parquet",
+        "period": "2022-12",
+        "size_bytes": 108734779,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "dae0880723903125448cb5fe39af657ced8b665da8178dd530a487e969abf1a4",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-01.parquet",
+        "period": "2023-01",
+        "size_bytes": 108792536,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "786145c467eb2210593340106e882e055b6efddb74639b209db4410078679b36",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-02.parquet",
+        "period": "2023-02",
+        "size_bytes": 108727714,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "00099fb71e8d95a55eda977b1849c1b7d0e6f6fd4837c7ee6b62b50937604f0b",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-03.parquet",
+        "period": "2023-03",
+        "size_bytes": 108732866,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "1086dff1d3ab62125a2600b6ac3a4cc75a5fdda2b4899d29903097d1c3033a62",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-04.parquet",
+        "period": "2023-04",
+        "size_bytes": 108730688,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "6956c1fe5be90749c0db680dc2accef17413d30c445ca2ed469e4c65e550b929",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-05.parquet",
+        "period": "2023-05",
+        "size_bytes": 108729258,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "9a939c60482ec05a53f206fad8f03a92ea1674df7d0564d83278c251e6743006",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-06.parquet",
+        "period": "2023-06",
+        "size_bytes": 108730107,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "8f42329569a6f2cf17c72cac742468f7bc168dd83ef5cd5cea2a56dc12064462",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-07.parquet",
+        "period": "2023-07",
+        "size_bytes": 108732611,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "2ba322e6723853889523bd80735875a31ab221a7250199268bb02c5470151b18",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-08.parquet",
+        "period": "2023-08",
+        "size_bytes": 108731558,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "52b8a349618f6e9bd3b4c67f55c9ad8d31df093672e3dee188df3a179cb770a7",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-09.parquet",
+        "period": "2023-09",
+        "size_bytes": 108727173,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "9ee3fa51a70730c3edaa5ea4a46074afc73997b26000e18ade45e02dac4a6c5e",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-10.parquet",
+        "period": "2023-10",
+        "size_bytes": 108729869,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "291037b6cb967c8211b8dfcc61a5a4f685ff82c3da2141e29f14a2ae4f2586fc",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-11.parquet",
+        "period": "2023-11",
+        "size_bytes": 108739829,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "3464143fc5f86cfb2a93451f86c922f3a7c589910353c6c8c786880f283c1b9c",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-12.parquet",
+        "period": "2023-12",
+        "size_bytes": 108728544,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "fa898930b0961cd2a965b73022e427f059a77ade33701569c551d5afa2f58910",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-01.parquet",
+        "period": "2024-01",
+        "size_bytes": 108732152,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "1675575c3b586801bbb6c28fd4aa20df45554e5cb6a82b9f5dd0818b4e5b6271",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-02.parquet",
+        "period": "2024-02",
+        "size_bytes": 108733861,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "7bfeba5d62441b1c1d6d4adf06fe96a1c6365e84bd32ecfa23540a2b12f488ca",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-03.parquet",
+        "period": "2024-03",
+        "size_bytes": 108731113,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "3f113b217d728c80bdd5fc6912ae5cc179871ae5e7050cad6564cd97315684c8",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-04.parquet",
+        "period": "2024-04",
+        "size_bytes": 108764017,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "ef3794eb151de19d6d81e69ac37accb05ad3c6d1619c3a8bc557a5a3ab0b2e23",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-05.parquet",
+        "period": "2024-05",
+        "size_bytes": 108729401,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "9ee51c61a8900dc9aea5fcf173af224a27a95c087d9b7323bc77549f98878314",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-06.parquet",
+        "period": "2024-06",
+        "size_bytes": 108736296,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "bcb95b94b5ba6cd03dc937f65b53b2817fcc2a9fc5ef77b4baae6aca2dc8838f",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-07.parquet",
+        "period": "2024-07",
+        "size_bytes": 108727953,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "c6a83e9e2c185d9c46eadbf1237c694ccd3e57e327b55fe86ac80623933f1ecf",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-08.parquet",
+        "period": "2024-08",
+        "size_bytes": 108725260,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "a71a7676912b0c16f0a184e2094d3ef3517cc885452f17aea35bc196a7377ce4",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-09.parquet",
+        "period": "2024-09",
+        "size_bytes": 108740040,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "042e391c0fbfd67f2cc622a6703f66e80e63bc9b9ea3f8236ead76c03174a0d5",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-10.parquet",
+        "period": "2024-10",
+        "size_bytes": 108728072,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "9e69c60a68806fa62d3b019f69a99056435c377a7e3016ef09216154f1c2a342",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-11.parquet",
+        "period": "2024-11",
+        "size_bytes": 108732663,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "d87c2735c9092298f017cb49950c58f0aea5d5e432890b9aaca0f75855c48cdb",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-12.parquet",
+        "period": "2024-12",
+        "size_bytes": 108732864,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "8b032e7b371e20e11bd2e83c989acad53c37829a51feb766b6f1810ccffd5465",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-01.parquet",
+        "period": "2025-01",
+        "size_bytes": 108733680,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "61b6c98dc34214d483f871fbc52d079e759ee05c4297b8f00c301e5cab3c7304",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-02.parquet",
+        "period": "2025-02",
+        "size_bytes": 108732094,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "fc04d2b50bc38bd9333b6c5d97b002ab491b2becb7e1822883d43d8c73e7fe05",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-03.parquet",
+        "period": "2025-03",
+        "size_bytes": 108727044,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "01e3651af1c340f8fd41a674930b9d3110b2cd75ae3ff6fe01e14fb156548755",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-04.parquet",
+        "period": "2025-04",
+        "size_bytes": 108731107,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "d34d769ee3f1840c2db37e602fe6748c39e0d29fde07d2502a57247b0db74652",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-05.parquet",
+        "period": "2025-05",
+        "size_bytes": 108735851,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "89004fb6507cbb2a7070c80642b67eddf2bedd3a60185c86646363b30931ae84",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-06.parquet",
+        "period": "2025-06",
+        "size_bytes": 108730959,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "8e8de3a417952390377d695b477424fcb1dca01d8cbdd86f7bba4a31b954f4d9",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-07.parquet",
+        "period": "2025-07",
+        "size_bytes": 108736602,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "8ae26b7ba4111722668ed30af24fa10ef9f9c5ce79af2f6511e36301c6118cc2",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-08.parquet",
+        "period": "2025-08",
+        "size_bytes": 108752573,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "a04a7a0b288595370129c2a0d809153c57997f9ca673238910afcc3a8e1d75e0",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-09.parquet",
+        "period": "2025-09",
+        "size_bytes": 108728752,
+        "status": "ok",
+        "row_count": 5000000,
+        "sha256": "9c33661c64e57e29098208a6ed370e3dfd70571573ed9ca33858a7d1399b6263",
+        "error": null
+      }
+    ]
+  },
+  "build": {
+    "mode": "by_file",
+    "wall_seconds": 1257.57,
+    "dbt_tests": {
+      "pass": 358,
+      "warn": 0,
+      "error": 0,
+      "skip": 0,
+      "no-op": 0,
+      "reused": 0,
+      "total": 358,
+      "returncode": 0
+    },
+    "db_size_bytes": 8738058240,
+    "per_file_seconds": [
+      {
+        "file": "yellow_tripdata_2022-01.parquet",
+        "seconds": 22.28,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-01.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-02.parquet",
+        "seconds": 25.54,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-02.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-03.parquet",
+        "seconds": 25.94,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-03.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-04.parquet",
+        "seconds": 26.43,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-04.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-05.parquet",
+        "seconds": 26.83,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-05.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-06.parquet",
+        "seconds": 26.34,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-06.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-07.parquet",
+        "seconds": 26.63,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-07.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-08.parquet",
+        "seconds": 25.82,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-08.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-09.parquet",
+        "seconds": 26.21,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-09.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-10.parquet",
+        "seconds": 25.63,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-10.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-11.parquet",
+        "seconds": 26.37,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-11.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-12.parquet",
+        "seconds": 25.59,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-12.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-01.parquet",
+        "seconds": 25.65,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-01.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-02.parquet",
+        "seconds": 25.41,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-02.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-03.parquet",
+        "seconds": 25.72,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-03.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-04.parquet",
+        "seconds": 25.12,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-04.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-05.parquet",
+        "seconds": 26.43,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-05.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-06.parquet",
+        "seconds": 26.06,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-06.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-07.parquet",
+        "seconds": 26.5,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-07.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-08.parquet",
+        "seconds": 25.7,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-08.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-09.parquet",
+        "seconds": 25.14,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-09.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-10.parquet",
+        "seconds": 25.74,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-10.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-11.parquet",
+        "seconds": 25.93,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-11.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-12.parquet",
+        "seconds": 25.74,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-12.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-01.parquet",
+        "seconds": 26.68,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-01.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-02.parquet",
+        "seconds": 26.47,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-02.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-03.parquet",
+        "seconds": 26.31,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-03.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-04.parquet",
+        "seconds": 26.22,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-04.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-05.parquet",
+        "seconds": 26.18,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-05.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-06.parquet",
+        "seconds": 26.33,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-06.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-07.parquet",
+        "seconds": 25.84,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-07.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-08.parquet",
+        "seconds": 25.72,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-08.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-09.parquet",
+        "seconds": 26.77,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-09.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-10.parquet",
+        "seconds": 26.28,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-10.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-11.parquet",
+        "seconds": 25.78,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-11.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-12.parquet",
+        "seconds": 26.54,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-12.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-01.parquet",
+        "seconds": 26.03,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-01.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-02.parquet",
+        "seconds": 26.28,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-02.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-03.parquet",
+        "seconds": 25.7,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-03.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-04.parquet",
+        "seconds": 25.49,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-04.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-05.parquet",
+        "seconds": 25.38,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-05.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-06.parquet",
+        "seconds": 26.16,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-06.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-07.parquet",
+        "seconds": 26.46,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-07.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-08.parquet",
+        "seconds": 25.81,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-08.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-09.parquet",
+        "seconds": 25.64,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-09.parquet",
+          "fact_trips": {
+            "rows": 5000000,
+            "distinct_keys": 5000000
+          },
+          "quarantine_trips": {
+            "rows": 0,
+            "distinct_keys": 0
+          },
+          "ok": true
+        }
+      }
+    ],
+    "final_build": {
+      "pass": 26,
+      "warn": 0,
+      "error": 0,
+      "skip": 0,
+      "no-op": 0,
+      "reused": 0,
+      "total": 26,
+      "returncode": 0
+    },
+    "incremental_tests": {
+      "pass": 17,
+      "warn": 0,
+      "error": 0,
+      "skip": 0,
+      "no-op": 0,
+      "reused": 0,
+      "total": 17,
+      "returncode": 0
+    }
+  },
+  "quality": {
+    "layers": {
+      "parquet_metadata (sum of footers)": 225000000,
+      "raw_view": 225000000,
+      "source rows seen by validation": 225000000,
+      "valid": 225000000,
+      "quarantined (recon mart)": 0,
+      "quarantine_trips (table)": 0,
+      "fact_trips (table)": 225000000
+    },
+    "checks": {
+      "raw view rows == sum of Parquet footers": true,
+      "validation saw every source row": true,
+      "per-file source rows == per-file Parquet footer rows": true,
+      "source == valid + quarantined": true,
+      "valid == fact_trips": true,
+      "quarantined == quarantine_trips table": true,
+      "trip_record_key unique within every file (fact and quarantine)": true,
+      "every manifest file loaded": true
+    },
+    "per_file": [
+      {
+        "source_file": "yellow_tripdata_2022-01.parquet",
+        "source_period": "2022-01",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-02.parquet",
+        "source_period": "2022-02",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-03.parquet",
+        "source_period": "2022-03",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-04.parquet",
+        "source_period": "2022-04",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-05.parquet",
+        "source_period": "2022-05",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-06.parquet",
+        "source_period": "2022-06",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-07.parquet",
+        "source_period": "2022-07",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-08.parquet",
+        "source_period": "2022-08",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-09.parquet",
+        "source_period": "2022-09",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-10.parquet",
+        "source_period": "2022-10",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-11.parquet",
+        "source_period": "2022-11",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2022-12.parquet",
+        "source_period": "2022-12",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-01.parquet",
+        "source_period": "2023-01",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-02.parquet",
+        "source_period": "2023-02",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-03.parquet",
+        "source_period": "2023-03",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-04.parquet",
+        "source_period": "2023-04",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-05.parquet",
+        "source_period": "2023-05",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-06.parquet",
+        "source_period": "2023-06",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-07.parquet",
+        "source_period": "2023-07",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-08.parquet",
+        "source_period": "2023-08",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-09.parquet",
+        "source_period": "2023-09",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-10.parquet",
+        "source_period": "2023-10",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-11.parquet",
+        "source_period": "2023-11",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2023-12.parquet",
+        "source_period": "2023-12",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-01.parquet",
+        "source_period": "2024-01",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-02.parquet",
+        "source_period": "2024-02",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-03.parquet",
+        "source_period": "2024-03",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-04.parquet",
+        "source_period": "2024-04",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-05.parquet",
+        "source_period": "2024-05",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-06.parquet",
+        "source_period": "2024-06",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-07.parquet",
+        "source_period": "2024-07",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-08.parquet",
+        "source_period": "2024-08",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-09.parquet",
+        "source_period": "2024-09",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-10.parquet",
+        "source_period": "2024-10",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-11.parquet",
+        "source_period": "2024-11",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2024-12.parquet",
+        "source_period": "2024-12",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-01.parquet",
+        "source_period": "2025-01",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-02.parquet",
+        "source_period": "2025-02",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-03.parquet",
+        "source_period": "2025-03",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-04.parquet",
+        "source_period": "2025-04",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-05.parquet",
+        "source_period": "2025-05",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-06.parquet",
+        "source_period": "2025-06",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-07.parquet",
+        "source_period": "2025-07",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-08.parquet",
+        "source_period": "2025-08",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      },
+      {
+        "source_file": "yellow_tripdata_2025-09.parquet",
+        "source_period": "2025-09",
+        "source_rows": 5000000,
+        "valid_rows": 5000000.0,
+        "quarantined_rows": 0.0,
+        "fact_rows": 5000000,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 0.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 0.0,
+        "quarantine_pct": 0.0,
+        "parquet_metadata_rows": 5000000
+      }
+    ],
+    "quarantine_reasons": [],
+    "by_year": [
+      {
+        "year": "2022",
+        "source_rows": 60000000.0,
+        "quarantined": 0.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 0.0,
+        "negative_distance": 0.0
+      },
+      {
+        "year": "2023",
+        "source_rows": 60000000.0,
+        "quarantined": 0.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 0.0,
+        "negative_distance": 0.0
+      },
+      {
+        "year": "2024",
+        "source_rows": 60000000.0,
+        "quarantined": 0.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 0.0,
+        "negative_distance": 0.0
+      },
+      {
+        "year": "2025",
+        "source_rows": 45000000.0,
+        "quarantined": 0.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 0.0,
+        "negative_distance": 0.0
+      }
+    ],
+    "cbd_fee_coverage": [
+      {
+        "year": "2022",
+        "rows": 60000000,
+        "non_null_cbd": 60000000
+      },
+      {
+        "year": "2023",
+        "rows": 60000000,
+        "non_null_cbd": 60000000
+      },
+      {
+        "year": "2024",
+        "rows": 60000000,
+        "non_null_cbd": 60000000
+      },
+      {
+        "year": "2025",
+        "rows": 45000000,
+        "non_null_cbd": 45000000
+      }
+    ],
+    "pickup_range": {
+      "min_pickup": "2022-01-01 00:00:00",
+      "max_pickup": "2025-09-28 00:00:00"
+    }
+  },
+  "benchmark": {
+    "generated_at_utc": "2026-10-16T00:35:14.997864+00:00",
+    "commit": null,
+    "scope": {
+      "source_dir": "raw",
+      "files": [
+        "yellow_tripdata_2025-04.parquet",
+        "yellow_tripdata_2025-05.parquet",
+        "yellow_tripdata_2025-06.parquet",
+        "yellow_tripdata_2025-07.parquet",
+        "yellow_tripdata_2025-08.parquet",
+        "yellow_tripdata_2025-09.parquet"
+      ],
+      "initial": [
+        "yellow_tripdata_2025-04.parquet",
+        "yellow_tripdata_2025-05.parquet",
+        "yellow_tripdata_2025-06.parquet",
+        "yellow_tripdata_2025-07.parquet",
+        "yellow_tripdata_2025-08.parquet"
+      ],
+      "added_incrementally": [
+        "yellow_tripdata_2025-09.parquet"
+      ]
+    },
+    "environment": {
+      "python": "3.13.16",
+      "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+      "cpu_count": 2
+    },
+    "runs": [
+      {
+        "label": "A_full_refresh_all",
+        "mode": "full_refresh",
+        "raw_rows_visible": 30000000,
+        "raw_files": 6,
+        "build_raw_seconds": 0.055,
+        "dbt_seconds": 166.678,
+        "wall_seconds": 166.734,
+        "db_size_bytes": 1184903168,
+        "output_rows": {
+          "fact_trips": 30000000,
+          "quarantine_trips": 0,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 3894,
+          "mart_daily_operations": 42606,
+          "mart_hourly_demand": 3888,
+          "mart_zone_performance": 1578,
+          "mart_quality_reconciliation": 6
+        },
+        "dbt_tests": {
+          "pass": 48,
+          "warn": 0,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 48,
+          "returncode": 0
+        }
+      },
+      {
+        "label": "B1_initial_load",
+        "mode": "full_refresh",
+        "raw_rows_visible": 25000000,
+        "raw_files": 5,
+        "build_raw_seconds": 0.048,
+        "dbt_seconds": 135.594,
+        "wall_seconds": 135.642,
+        "db_size_bytes": 986722304,
+        "output_rows": {
+          "fact_trips": 25000000,
+          "quarantine_trips": 0,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 3245,
+          "mart_daily_operations": 35505,
+          "mart_hourly_demand": 3240,
+          "mart_zone_performance": 1315,
+          "mart_quality_reconciliation": 5
+        },
+        "dbt_tests": {
+          "pass": 48,
+          "warn": 0,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 48,
+          "returncode": 0
+        }
+      },
+      {
+        "label": "B2_incremental_add_new",
+        "mode": "incremental",
+        "raw_rows_visible": 30000000,
+        "raw_files": 6,
+        "build_raw_seconds": 0.066,
+        "dbt_seconds": 155.636,
+        "wall_seconds": 155.702,
+        "db_size_bytes": 1183854592,
+        "output_rows": {
+          "fact_trips": 30000000,
+          "quarantine_trips": 0,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 3894,
+          "mart_daily_operations": 42606,
+          "mart_hourly_demand": 3888,
+          "mart_zone_performance": 1578,
+          "mart_quality_reconciliation": 6
+        },
+        "dbt_tests": {
+          "pass": 48,
+          "warn": 0,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 48,
+          "returncode": 0
+        }
+      },
+      {
+        "label": "C_incremental_replay",
+        "mode": "incremental",
+        "raw_rows_visible": 30000000,
+        "raw_files": 6,
+        "build_raw_seconds": 0.068,
+        "dbt_seconds": 141.308,
+        "wall_seconds": 141.376,
+        "db_size_bytes": 1184641024,
+        "output_rows": {
+          "fact_trips": 30000000,
+          "quarantine_trips": 0,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 3894,
+          "mart_daily_operations": 42606,
+          "mart_hourly_demand": 3888,
+          "mart_zone_performance": 1578,
+          "mart_quality_reconciliation": 6
+        },
+        "dbt_tests": {
+          "pass": 48,
+          "warn": 0,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 48,
+          "returncode": 0
+        }
+      },
+      {
+        "label": "D_by_file_full_load",
+        "mode": "by_file",
+        "raw_files": 6,
+        "wall_seconds": 167.344,
+        "dbt_seconds": null,
+        "db_size_bytes": 1171795968,
+        "output_rows": {
+          "fact_trips": 30000000,
+          "quarantine_trips": 0,
+          "dim_zone": 266,
+          "dim_payment_type": 8,
+          "dim_datetime": 3894,
+          "mart_daily_operations": 42606,
+          "mart_hourly_demand": 3888,
+          "mart_zone_performance": 1578,
+          "mart_quality_reconciliation": 6
+        },
+        "dbt_tests": {
+          "pass": 85,
+          "warn": 0,
+          "error": 0,
+          "skip": 0,
+          "no-op": 0,
+          "reused": 0,
+          "total": 85,
+          "returncode": 0
+        },
+        "per_file_seconds": [
+          {
+            "file": "yellow_tripdata_2025-04.parquet",
+            "seconds": 20.86,
+            "ok": true,
+            "integrity": {
+              "file": "yellow_tripdata_2025-04.parquet",
+              "fact_trips": {
+                "rows": 5000000,
+                "distinct_keys": 5000000
+              },
+              "quarantine_trips": {
+                "rows": 0,
+                "distinct_keys": 0
+              },
+              "ok": true
+            }
+          },
+          {
+            "file": "yellow_tripdata_2025-05.parquet",
+            "seconds": 24.58,
+            "ok": true,
+            "integrity": {
+              "file": "yellow_tripdata_2025-05.parquet",
+              "fact_trips": {
+                "rows": 5000000,
+                "distinct_keys": 5000000
+              },
+              "quarantine_trips": {
+                "rows": 0,
+                "distinct_keys": 0
+              },
+              "ok": true
+            }
+          },
+          {
+            "file": "yellow_tripdata_2025-06.parquet",
+            "seconds": 24.52,
+            "ok": true,
+            "integrity": {
+              "file": "yellow_tripdata_2025-06.parquet",
+              "fact_trips": {
+                "rows": 5000000,
+                "distinct_keys": 5000000
+              },
+              "quarantine_trips": {
+                "rows": 0,
+                "distinct_keys": 0
+              },
+              "ok": true
+            }
+          },
+          {
+            "file": "yellow_tripdata_2025-07.parquet",
+            "seconds": 24.65,
+            "ok": true,
+            "integrity": {
+              "file": "yellow_tripdata_2025-07.parquet",
+              "fact_trips": {
+                "rows": 5000000,
+                "distinct_keys": 5000000
+              },
+              "quarantine_trips": {
+                "rows": 0,
+                "distinct_keys": 0
+              },
+              "ok": true
+            }
+          },
+          {
+            "file": "yellow_tripdata_2025-08.parquet",
+            "seconds": 25.23,
+            "ok": true,
+            "integrity": {
+              "file": "yellow_tripdata_2025-08.parquet",
+              "fact_trips": {
+                "rows": 5000000,
+                "distinct_keys": 5000000
+              },
+              "quarantine_trips": {
+                "rows": 0,
+                "distinct_keys": 0
+              },
+              "ok": true
+            }
+          },
+          {
+            "file": "yellow_tripdata_2025-09.parquet",
+            "seconds": 26.62,
+            "ok": true,
+            "integrity": {
+              "file": "yellow_tripdata_2025-09.parquet",
+              "fact_trips": {
+                "rows": 5000000,
+                "distinct_keys": 5000000
+              },
+              "quarantine_trips": {
+                "rows": 0,
+                "distinct_keys": 0
+              },
+              "ok": true
+            }
+          }
+        ]
+      }
+    ],
+    "replay_idempotent": true,
+    "equivalent_to_full_refresh": true,
+    "equivalence_detail": {
+      "fact_trips": {
+        "rows_a": 30000000,
+        "rows_b": 30000000,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "quarantine_trips": {
+        "rows_a": 0,
+        "rows_b": 0,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_zone": {
+        "rows_a": 266,
+        "rows_b": 266,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_payment_type": {
+        "rows_a": 8,
+        "rows_b": 8,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_datetime": {
+        "rows_a": 3894,
+        "rows_b": 3894,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_daily_operations": {
+        "rows_a": 42606,
+        "rows_b": 42606,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_hourly_demand": {
+        "rows_a": 3888,
+        "rows_b": 3888,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_zone_performance": {
+        "rows_a": 1578,
+        "rows_b": 1578,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_quality_reconciliation": {
+        "rows_a": 6,
+        "rows_b": 6,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      }
+    },
+    "by_file_equivalent_to_single_pass": true,
+    "by_file_equivalence_detail": {
+      "fact_trips": {
+        "rows_a": 30000000,
+        "rows_b": 30000000,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "quarantine_trips": {
+        "rows_a": 0,
+        "rows_b": 0,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_zone": {
+        "rows_a": 266,
+        "rows_b": 266,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_payment_type": {
+        "rows_a": 8,
+        "rows_b": 8,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "dim_datetime": {
+        "rows_a": 3894,
+        "rows_b": 3894,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_daily_operations": {
+        "rows_a": 42606,
+        "rows_b": 42606,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_hourly_demand": {
+        "rows_a": 3888,
+        "rows_b": 3888,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_zone_performance": {
+        "rows_a": 1578,
+        "rows_b": 1578,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      },
+      "mart_quality_reconciliation": {
+        "rows_a": 6,
+        "rows_b": 6,
+        "a_minus_b": 0,
+        "b_minus_a": 0,
+        "equal": true
+      }
+    }
+  }
+}
