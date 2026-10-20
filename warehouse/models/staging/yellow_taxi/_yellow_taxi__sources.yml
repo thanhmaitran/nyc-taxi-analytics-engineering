@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: raw_yellow_taxi
+        description: >
+          Raw view over validated NYC TLC Yellow Taxi Parquet files (built by
+          scripts/build_raw_views.py). Source files remain immutable.
