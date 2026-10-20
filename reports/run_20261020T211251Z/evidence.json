@@ -1,0 +1,2939 @@
+{
+  "label": "real-2022-2026",
+  "generated_at_utc": "2026-10-20T21:12:51.451134+00:00",
+  "environment": {
+    "python": "3.14.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "cpu_count": 8,
+    "ram_gb": 8.3,
+    "duckdb_memory_limit": "6GB",
+    "packages": {
+      "duckdb": "1.5.6",
+      "pyarrow": "26.0.0",
+      "dbt-core": "1.12.5",
+      "dbt-duckdb": "1.11.0",
+      "sqlfluff": "4.4.0"
+    },
+    "commit": null
+  },
+  "command": "python scripts/verify_real_data.py --label real-2022-2026 --skip-benchmark",
+  "audit": {
+    "generated_at_utc": "2026-10-20T21:12:56.807039+00:00",
+    "file_count": 56,
+    "total_bytes": 3285269895,
+    "duplicate_periods": {},
+    "missing_periods": [],
+    "zone_lookup": {
+      "status": "ok",
+      "columns": [
+        "LocationID",
+        "Borough",
+        "Zone",
+        "service_zone"
+      ]
+    },
+    "status_counts": {
+      "ok": 56
+    },
+    "changed_checksums": [],
+    "schema_drift": [
+      {
+        "from": "2023-01",
+        "to": "2023-02",
+        "changes": [
+          {
+            "change": "renamed_case",
+            "column": "Airport_fee",
+            "from": "airport_fee",
+            "to": "Airport_fee"
+          },
+          {
+            "change": "type_changed",
+            "column": "DOLocationID",
+            "from": "int64",
+            "to": "int32"
+          },
+          {
+            "change": "type_changed",
+            "column": "passenger_count",
+            "from": "double",
+            "to": "int64"
+          },
+          {
+            "change": "type_changed",
+            "column": "PULocationID",
+            "from": "int64",
+            "to": "int32"
+          },
+          {
+            "change": "type_changed",
+            "column": "RatecodeID",
+            "from": "double",
+            "to": "int64"
+          },
+          {
+            "change": "type_changed",
+            "column": "store_and_fwd_flag",
+            "from": "string",
+            "to": "large_string"
+          },
+          {
+            "change": "type_changed",
+            "column": "VendorID",
+            "from": "int64",
+            "to": "int32"
+          }
+        ]
+      },
+      {
+        "from": "2024-12",
+        "to": "2025-01",
+        "changes": [
+          {
+            "change": "added_column",
+            "column": "cbd_congestion_fee",
+            "to": "double"
+          }
+        ]
+      },
+      {
+        "from": "2026-05",
+        "to": "2026-06",
+        "changes": [
+          {
+            "change": "added_column",
+            "column": "request_source",
+            "to": "large_string"
+          }
+        ]
+      }
+    ],
+    "schema_findings": [
+      {
+        "file": "yellow_tripdata_2023-02.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-03.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-04.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-05.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-06.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-07.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-08.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-09.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-10.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-11.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2023-12.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-01.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-02.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-03.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-04.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-05.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-06.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-07.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-08.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-09.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-10.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-11.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2024-12.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-01.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-02.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-03.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-04.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-05.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-06.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-07.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-08.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-09.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-10.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-11.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2025-12.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-01.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-02.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-03.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-04.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-05.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-06.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-06.parquet",
+        "kind": "unknown_column",
+        "column": "request_source",
+        "severity": "warning",
+        "detail": "column not in data dictionary"
+      },
+      {
+        "file": "yellow_tripdata_2026-07.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-07.parquet",
+        "kind": "unknown_column",
+        "column": "request_source",
+        "severity": "warning",
+        "detail": "column not in data dictionary"
+      },
+      {
+        "file": "yellow_tripdata_2026-08.parquet",
+        "kind": "column_case_variant",
+        "column": "Airport_fee",
+        "severity": "warning",
+        "detail": "documented column with different capitalisation"
+      },
+      {
+        "file": "yellow_tripdata_2026-08.parquet",
+        "kind": "unknown_column",
+        "column": "request_source",
+        "severity": "warning",
+        "detail": "column not in data dictionary"
+      }
+    ],
+    "blocking": false,
+    "files": [
+      {
+        "file_name": "yellow_tripdata_2022-01.parquet",
+        "period": "2022-01",
+        "size_bytes": 38139949,
+        "status": "ok",
+        "row_count": 2463931,
+        "sha256": "797d6f008e67c3e3371b7f957ab97dbc2b38a9fb0ac083cb5eae4b0297b32372",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-02.parquet",
+        "period": "2022-02",
+        "size_bytes": 45616512,
+        "status": "ok",
+        "row_count": 2979431,
+        "sha256": "9905ead83ac16ae4a2915cb44ab1edb9c53eb3ac5a77a71f2a2e3ba18d59efb4",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-03.parquet",
+        "period": "2022-03",
+        "size_bytes": 55682369,
+        "status": "ok",
+        "row_count": 3627882,
+        "sha256": "b8b63566178c65da758cc292338ebc308534eb57607085fc67b2c939ae6035e3",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-04.parquet",
+        "period": "2022-04",
+        "size_bytes": 55222692,
+        "status": "ok",
+        "row_count": 3599920,
+        "sha256": "8c4162f28244098bd40f150f5f639cc1f41673e0f0df47e6399d7d374c224049",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-05.parquet",
+        "period": "2022-05",
+        "size_bytes": 55558821,
+        "status": "ok",
+        "row_count": 3588295,
+        "sha256": "6946b56ee057b72dced2204e0c10f2be2e1b7358c5b2c2943f88d2310089c43c",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-06.parquet",
+        "period": "2022-06",
+        "size_bytes": 55365184,
+        "status": "ok",
+        "row_count": 3558124,
+        "sha256": "a08f27ea544a500a6e10637605e5906e246e2836435ba1c05a3a3521faf42389",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-07.parquet",
+        "period": "2022-07",
+        "size_bytes": 49367712,
+        "status": "ok",
+        "row_count": 3174394,
+        "sha256": "5aa3c2a9deb55f09527e76e6f94a8185a4a04cd6361c8082ff6d6e64ab817d5b",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-08.parquet",
+        "period": "2022-08",
+        "size_bytes": 49717159,
+        "status": "ok",
+        "row_count": 3152677,
+        "sha256": "7c2d8f6ad71d3b0e432a77553224ea69f473d0b8bdff24a5b11d289ac5388536",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-09.parquet",
+        "period": "2022-09",
+        "size_bytes": 49619957,
+        "status": "ok",
+        "row_count": 3183767,
+        "sha256": "1ce6af91b4eb1583d3e710fec414c0aedddec96517b309506e7d12c3de72bb02",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-10.parquet",
+        "period": "2022-10",
+        "size_bytes": 57061938,
+        "status": "ok",
+        "row_count": 3675411,
+        "sha256": "3f3cab00e7d236735d3ab227e54ffe48fd28b0afbb30ae90d843d7a065a3ae69",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-11.parquet",
+        "period": "2022-11",
+        "size_bytes": 50106631,
+        "status": "ok",
+        "row_count": 3252717,
+        "sha256": "bf9fc6cd403320f2d00c2672fe1d4d58594c56ed7f64ab9bc7021d4c12bb543c",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2022-12.parquet",
+        "period": "2022-12",
+        "size_bytes": 53640739,
+        "status": "ok",
+        "row_count": 3399549,
+        "sha256": "4a9a69306bd36547b2eed3ecfa7365b53c2872f45b9647834dbd5166dee93708",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-01.parquet",
+        "period": "2023-01",
+        "size_bytes": 47673370,
+        "status": "ok",
+        "row_count": 3066766,
+        "sha256": "32df6f67578fa86c484a6b5ef23a5281992ff085521082340b0f9e5889e9a572",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-02.parquet",
+        "period": "2023-02",
+        "size_bytes": 47748012,
+        "status": "ok",
+        "row_count": 2913955,
+        "sha256": "4809e6aaac64f05a62d16a25d55713be1537ad64fc261e895eaf2d2120fe750a",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-03.parquet",
+        "period": "2023-03",
+        "size_bytes": 56127762,
+        "status": "ok",
+        "row_count": 3403766,
+        "sha256": "e7d44943111b007bf0e7084863511886e0db29f862f9a96239383a1f86c6c26e",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-04.parquet",
+        "period": "2023-04",
+        "size_bytes": 54222699,
+        "status": "ok",
+        "row_count": 3288250,
+        "sha256": "95c01c53c865e06489179bdecce3a59603697a1557c4d5d183c20ae13a144dc6",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-05.parquet",
+        "period": "2023-05",
+        "size_bytes": 58654627,
+        "status": "ok",
+        "row_count": 3513649,
+        "sha256": "9bd7d1c557bb9d0413619ba296b4828b884852a70bd07f2230b83f080d9a8591",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-06.parquet",
+        "period": "2023-06",
+        "size_bytes": 54999465,
+        "status": "ok",
+        "row_count": 3307234,
+        "sha256": "3e60e29b5df45683948b68acbfb503aa459d14162c610622585c6580fdbfc73a",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-07.parquet",
+        "period": "2023-07",
+        "size_bytes": 48361828,
+        "status": "ok",
+        "row_count": 2907108,
+        "sha256": "98504ae351d920e9e0b61241f5707f90ee1588cfb199c378459234b5035805ab",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-08.parquet",
+        "period": "2023-08",
+        "size_bytes": 48152353,
+        "status": "ok",
+        "row_count": 2824209,
+        "sha256": "84ce36a2f84fa14c12fd976c79a7d4f30c871f1782b08ca7c27bb76ab946e66b",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-09.parquet",
+        "period": "2023-09",
+        "size_bytes": 47895515,
+        "status": "ok",
+        "row_count": 2846722,
+        "sha256": "091bf156bea5bb10bd217f5f12375f966f8789349af45d5ee4153e3e1e077a87",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-10.parquet",
+        "period": "2023-10",
+        "size_bytes": 59009059,
+        "status": "ok",
+        "row_count": 3522285,
+        "sha256": "dc5f069476d350df802ed8120f3b39ec321c34cfa905381e87f608c78ca0c645",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-11.parquet",
+        "period": "2023-11",
+        "size_bytes": 56094653,
+        "status": "ok",
+        "row_count": 3339715,
+        "sha256": "af203de0e73a92d640121f02a34326f25037d62380fc406237c87c2a4231ae58",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2023-12.parquet",
+        "period": "2023-12",
+        "size_bytes": 56804275,
+        "status": "ok",
+        "row_count": 3376567,
+        "sha256": "ab4f4db11cb31484747f62eb507c13fcfaff290aaf59c13e6465dea0b1166b9c",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-01.parquet",
+        "period": "2024-01",
+        "size_bytes": 49961641,
+        "status": "ok",
+        "row_count": 2964624,
+        "sha256": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-02.parquet",
+        "period": "2024-02",
+        "size_bytes": 50349284,
+        "status": "ok",
+        "row_count": 3007526,
+        "sha256": "c76c43c18c6c6664080dd920baab4928988d5786a6b65980792ca7cd796f9f20",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-03.parquet",
+        "period": "2024-03",
+        "size_bytes": 60078280,
+        "status": "ok",
+        "row_count": 3582628,
+        "sha256": "2d4cdc8fb96726cdd3803b13b02d2e61e71d45720aff0ebc693a8bdd1f249823",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-04.parquet",
+        "period": "2024-04",
+        "size_bytes": 59133625,
+        "status": "ok",
+        "row_count": 3514289,
+        "sha256": "ce37f736c7cf9e92164c850ef2b502a8f7bb590fc1804b6edbcb80293da01b89",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-05.parquet",
+        "period": "2024-05",
+        "size_bytes": 62553128,
+        "status": "ok",
+        "row_count": 3723833,
+        "sha256": "1974230be2b5a3ea92e47b5eb77f32dbf1de896d81ad8df4ab6faba52749ad23",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-06.parquet",
+        "period": "2024-06",
+        "size_bytes": 59859922,
+        "status": "ok",
+        "row_count": 3539193,
+        "sha256": "677cf14c8347f745b583f012fbdba072334c6c4efa17bfd6a64369f2ba30329c",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-07.parquet",
+        "period": "2024-07",
+        "size_bytes": 52299432,
+        "status": "ok",
+        "row_count": 3076903,
+        "sha256": "af12d6b04daeb78550799ae99933d495b27d715b6dbb0fad9bb750a4537d3070",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-08.parquet",
+        "period": "2024-08",
+        "size_bytes": 51067350,
+        "status": "ok",
+        "row_count": 2979183,
+        "sha256": "7315643dd16bafc03e27d9903edbfd35404c2550a695d0da0a3e73852d940cfb",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-09.parquet",
+        "period": "2024-09",
+        "size_bytes": 61170186,
+        "status": "ok",
+        "row_count": 3633030,
+        "sha256": "2f42e4a383a6635de803001462848d0aee2b47f6ce899126805d2d05361fb843",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-10.parquet",
+        "period": "2024-10",
+        "size_bytes": 64346071,
+        "status": "ok",
+        "row_count": 3833771,
+        "sha256": "d19fe05aa0b259af24eb47051735293287f1e6dc263ba04030ec1ab4c6ec2650",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-11.parquet",
+        "period": "2024-11",
+        "size_bytes": 60658709,
+        "status": "ok",
+        "row_count": 3646369,
+        "sha256": "5ef321876de5007a7c147a347389133fc94fd7ac28f82eb1d57d8f2cf05cfd3b",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2024-12.parquet",
+        "period": "2024-12",
+        "size_bytes": 61524085,
+        "status": "ok",
+        "row_count": 3668371,
+        "sha256": "41ebf7db80bebde60c58e5143c14cdf38ad04a0f3e3ff44215b3e240d55f6c78",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-01.parquet",
+        "period": "2025-01",
+        "size_bytes": 59158238,
+        "status": "ok",
+        "row_count": 3475226,
+        "sha256": "9af277e4c0d3f9deb30644da822981e1e7df6af58313170fd3aa8a474485488a",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-02.parquet",
+        "period": "2025-02",
+        "size_bytes": 60343086,
+        "status": "ok",
+        "row_count": 3577543,
+        "sha256": "037cba555a73663f3a51a2c27816e40e3feb364769942bdf122b9da31e377bd3",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-03.parquet",
+        "period": "2025-03",
+        "size_bytes": 69964745,
+        "status": "ok",
+        "row_count": 4145257,
+        "sha256": "20c4b77cce457b7cfdae77c5069ca7dc91c167f876a41467f4502ab69487a186",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-04.parquet",
+        "period": "2025-04",
+        "size_bytes": 67352824,
+        "status": "ok",
+        "row_count": 3970553,
+        "sha256": "6f98938de9380a3f85600533816f0dc0e6d9b5b210e485d623952bac599bbe28",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-05.parquet",
+        "period": "2025-05",
+        "size_bytes": 77837865,
+        "status": "ok",
+        "row_count": 4591845,
+        "sha256": "7ef46bcd0fceee7f8c0bb38a532be05bceefabb512d4bb0b32a7727dd862b15c",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-06.parquet",
+        "period": "2025-06",
+        "size_bytes": 73542954,
+        "status": "ok",
+        "row_count": 4322960,
+        "sha256": "1bea7f5b09c744414451fa7fef09fbc5a393ffb1621c859be6ba0df23a14e1b6",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-07.parquet",
+        "period": "2025-07",
+        "size_bytes": 66943728,
+        "status": "ok",
+        "row_count": 3898963,
+        "sha256": "1efa6a0458dc60341f7f81dcbb5015af731f42d1a109f4e0d594dd46970fd4ef",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-08.parquet",
+        "period": "2025-08",
+        "size_bytes": 62293743,
+        "status": "ok",
+        "row_count": 3574091,
+        "sha256": "b982ace703e3564d92e94edae5ec93515f4f1fb07a5b95e7404c32464c1a6a89",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-09.parquet",
+        "period": "2025-09",
+        "size_bytes": 72432945,
+        "status": "ok",
+        "row_count": 4251015,
+        "sha256": "cd39b9901f01d1fd752d45cbaec91ee5f68c4dddf9e261e938c1dbab404644c7",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-10.parquet",
+        "period": "2025-10",
+        "size_bytes": 75267589,
+        "status": "ok",
+        "row_count": 4428699,
+        "sha256": "e1f63caf331bc6230d9c6f757cb88e55fdc2bddde185fb414d2c947abdc773c3",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-11.parquet",
+        "period": "2025-11",
+        "size_bytes": 71134255,
+        "status": "ok",
+        "row_count": 4181444,
+        "sha256": "2cf2f3127f96d4d5dea30f8afe05119cf8e4ba57bd9e60b789d3f296fc8459ab",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2025-12.parquet",
+        "period": "2025-12",
+        "size_bytes": 73701327,
+        "status": "ok",
+        "row_count": 4305006,
+        "sha256": "eaba7ff61ebb6453fc6f673fda43d621380307f869b768b124992e8486c785e1",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2026-01.parquet",
+        "period": "2026-01",
+        "size_bytes": 64165080,
+        "status": "ok",
+        "row_count": 3724889,
+        "sha256": "8b3933fe6f0d7b6d8826613c0dd724edc680ff7c49e2bd4c7635c05102728637",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2026-02.parquet",
+        "period": "2026-02",
+        "size_bytes": 58683353,
+        "status": "ok",
+        "row_count": 3399866,
+        "sha256": "5352ca800f29c40a221ed5b0c6392c451fde7fcd236a73651bd5aea74713a26c",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2026-03.parquet",
+        "period": "2026-03",
+        "size_bytes": 67891249,
+        "status": "ok",
+        "row_count": 3952451,
+        "sha256": "d7af794a7ac06cbbb5afb4d1df9e86d84f2e878584de708ff2ffca4bd7d234d9",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2026-04.parquet",
+        "period": "2026-04",
+        "size_bytes": 64818115,
+        "status": "ok",
+        "row_count": 3831240,
+        "sha256": "e03b82d5722a6b21d4fbce011afd8837495202c0b5db77ff0d8d15dd80834ba8",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2026-05.parquet",
+        "period": "2026-05",
+        "size_bytes": 69699174,
+        "status": "ok",
+        "row_count": 4090836,
+        "sha256": "9aa5a1609e2bf07d9051b7d530de05b1019e12a560ecb2c59c137c8b3a8b6750",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2026-06.parquet",
+        "period": "2026-06",
+        "size_bytes": 65465637,
+        "status": "ok",
+        "row_count": 3837248,
+        "sha256": "f340c62a18885c56176433c9db28e97d0a8a14e6e49869276ad8afb20ebf088b",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2026-07.parquet",
+        "period": "2026-07",
+        "size_bytes": 61685033,
+        "status": "ok",
+        "row_count": 3530109,
+        "sha256": "3260bb629c2f334055f8a566cbb02c15476b15120c45d7ad0aae46fc4bb06612",
+        "error": null
+      },
+      {
+        "file_name": "yellow_tripdata_2026-08.parquet",
+        "period": "2026-08",
+        "size_bytes": 59043961,
+        "status": "ok",
+        "row_count": 3336716,
+        "sha256": "6683a025443afcbb28ac4f238fcbb6334767dc69fab4a16b1eb16a78dcd013cd",
+        "error": null
+      }
+    ]
+  },
+  "build": {
+    "mode": "by_file",
+    "wall_seconds": 1197.34,
+    "dbt_tests": {
+      "pass": 434,
+      "warn": 1,
+      "error": 0,
+      "skip": 0,
+      "no-op": 0,
+      "reused": 0,
+      "total": 435,
+      "returncode": 0
+    },
+    "db_size_bytes": 8598073344,
+    "per_file_seconds": [
+      {
+        "file": "yellow_tripdata_2022-01.parquet",
+        "seconds": 13.41,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-01.parquet",
+          "fact_trips": {
+            "rows": 2462526,
+            "distinct_keys": 2462526
+          },
+          "quarantine_trips": {
+            "rows": 1405,
+            "distinct_keys": 1405
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-02.parquet",
+        "seconds": 17.23,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-02.parquet",
+          "fact_trips": {
+            "rows": 2977818,
+            "distinct_keys": 2977818
+          },
+          "quarantine_trips": {
+            "rows": 1613,
+            "distinct_keys": 1613
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-03.parquet",
+        "seconds": 28.25,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-03.parquet",
+          "fact_trips": {
+            "rows": 3626010,
+            "distinct_keys": 3626010
+          },
+          "quarantine_trips": {
+            "rows": 1872,
+            "distinct_keys": 1872
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-04.parquet",
+        "seconds": 26.65,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-04.parquet",
+          "fact_trips": {
+            "rows": 3598101,
+            "distinct_keys": 3598101
+          },
+          "quarantine_trips": {
+            "rows": 1819,
+            "distinct_keys": 1819
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-05.parquet",
+        "seconds": 22.1,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-05.parquet",
+          "fact_trips": {
+            "rows": 3586884,
+            "distinct_keys": 3586884
+          },
+          "quarantine_trips": {
+            "rows": 1411,
+            "distinct_keys": 1411
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-06.parquet",
+        "seconds": 23.92,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-06.parquet",
+          "fact_trips": {
+            "rows": 3556391,
+            "distinct_keys": 3556391
+          },
+          "quarantine_trips": {
+            "rows": 1733,
+            "distinct_keys": 1733
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-07.parquet",
+        "seconds": 21.07,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-07.parquet",
+          "fact_trips": {
+            "rows": 3173051,
+            "distinct_keys": 3173051
+          },
+          "quarantine_trips": {
+            "rows": 1343,
+            "distinct_keys": 1343
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-08.parquet",
+        "seconds": 21.32,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-08.parquet",
+          "fact_trips": {
+            "rows": 3151767,
+            "distinct_keys": 3151767
+          },
+          "quarantine_trips": {
+            "rows": 910,
+            "distinct_keys": 910
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-09.parquet",
+        "seconds": 21.96,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-09.parquet",
+          "fact_trips": {
+            "rows": 3183688,
+            "distinct_keys": 3183688
+          },
+          "quarantine_trips": {
+            "rows": 79,
+            "distinct_keys": 79
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-10.parquet",
+        "seconds": 23.47,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-10.parquet",
+          "fact_trips": {
+            "rows": 3674326,
+            "distinct_keys": 3674326
+          },
+          "quarantine_trips": {
+            "rows": 1085,
+            "distinct_keys": 1085
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-11.parquet",
+        "seconds": 20.52,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-11.parquet",
+          "fact_trips": {
+            "rows": 3251059,
+            "distinct_keys": 3251059
+          },
+          "quarantine_trips": {
+            "rows": 1658,
+            "distinct_keys": 1658
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2022-12.parquet",
+        "seconds": 22.63,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2022-12.parquet",
+          "fact_trips": {
+            "rows": 3399399,
+            "distinct_keys": 3399399
+          },
+          "quarantine_trips": {
+            "rows": 150,
+            "distinct_keys": 150
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-01.parquet",
+        "seconds": 20.05,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-01.parquet",
+          "fact_trips": {
+            "rows": 3066715,
+            "distinct_keys": 3066715
+          },
+          "quarantine_trips": {
+            "rows": 51,
+            "distinct_keys": 51
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-02.parquet",
+        "seconds": 19.6,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-02.parquet",
+          "fact_trips": {
+            "rows": 2913624,
+            "distinct_keys": 2913624
+          },
+          "quarantine_trips": {
+            "rows": 331,
+            "distinct_keys": 331
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-03.parquet",
+        "seconds": 23.57,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-03.parquet",
+          "fact_trips": {
+            "rows": 3403220,
+            "distinct_keys": 3403220
+          },
+          "quarantine_trips": {
+            "rows": 546,
+            "distinct_keys": 546
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-04.parquet",
+        "seconds": 21.28,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-04.parquet",
+          "fact_trips": {
+            "rows": 3288064,
+            "distinct_keys": 3288064
+          },
+          "quarantine_trips": {
+            "rows": 186,
+            "distinct_keys": 186
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-05.parquet",
+        "seconds": 22.95,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-05.parquet",
+          "fact_trips": {
+            "rows": 3513531,
+            "distinct_keys": 3513531
+          },
+          "quarantine_trips": {
+            "rows": 118,
+            "distinct_keys": 118
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-06.parquet",
+        "seconds": 21.84,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-06.parquet",
+          "fact_trips": {
+            "rows": 3307004,
+            "distinct_keys": 3307004
+          },
+          "quarantine_trips": {
+            "rows": 230,
+            "distinct_keys": 230
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-07.parquet",
+        "seconds": 18.95,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-07.parquet",
+          "fact_trips": {
+            "rows": 2906887,
+            "distinct_keys": 2906887
+          },
+          "quarantine_trips": {
+            "rows": 221,
+            "distinct_keys": 221
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-08.parquet",
+        "seconds": 15.34,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-08.parquet",
+          "fact_trips": {
+            "rows": 2824029,
+            "distinct_keys": 2824029
+          },
+          "quarantine_trips": {
+            "rows": 180,
+            "distinct_keys": 180
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-09.parquet",
+        "seconds": 15.68,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-09.parquet",
+          "fact_trips": {
+            "rows": 2846544,
+            "distinct_keys": 2846544
+          },
+          "quarantine_trips": {
+            "rows": 178,
+            "distinct_keys": 178
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-10.parquet",
+        "seconds": 17.9,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-10.parquet",
+          "fact_trips": {
+            "rows": 3522147,
+            "distinct_keys": 3522147
+          },
+          "quarantine_trips": {
+            "rows": 138,
+            "distinct_keys": 138
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-11.parquet",
+        "seconds": 16.88,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-11.parquet",
+          "fact_trips": {
+            "rows": 3338797,
+            "distinct_keys": 3338797
+          },
+          "quarantine_trips": {
+            "rows": 918,
+            "distinct_keys": 918
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2023-12.parquet",
+        "seconds": 17.7,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2023-12.parquet",
+          "fact_trips": {
+            "rows": 3376457,
+            "distinct_keys": 3376457
+          },
+          "quarantine_trips": {
+            "rows": 110,
+            "distinct_keys": 110
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-01.parquet",
+        "seconds": 16.0,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-01.parquet",
+          "fact_trips": {
+            "rows": 2964550,
+            "distinct_keys": 2964550
+          },
+          "quarantine_trips": {
+            "rows": 74,
+            "distinct_keys": 74
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-02.parquet",
+        "seconds": 17.08,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-02.parquet",
+          "fact_trips": {
+            "rows": 3007503,
+            "distinct_keys": 3007503
+          },
+          "quarantine_trips": {
+            "rows": 23,
+            "distinct_keys": 23
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-03.parquet",
+        "seconds": 20.61,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-03.parquet",
+          "fact_trips": {
+            "rows": 3582488,
+            "distinct_keys": 3582488
+          },
+          "quarantine_trips": {
+            "rows": 140,
+            "distinct_keys": 140
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-04.parquet",
+        "seconds": 19.05,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-04.parquet",
+          "fact_trips": {
+            "rows": 3514210,
+            "distinct_keys": 3514210
+          },
+          "quarantine_trips": {
+            "rows": 79,
+            "distinct_keys": 79
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-05.parquet",
+        "seconds": 19.46,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-05.parquet",
+          "fact_trips": {
+            "rows": 3723758,
+            "distinct_keys": 3723758
+          },
+          "quarantine_trips": {
+            "rows": 75,
+            "distinct_keys": 75
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-06.parquet",
+        "seconds": 18.34,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-06.parquet",
+          "fact_trips": {
+            "rows": 3539134,
+            "distinct_keys": 3539134
+          },
+          "quarantine_trips": {
+            "rows": 59,
+            "distinct_keys": 59
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-07.parquet",
+        "seconds": 16.75,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-07.parquet",
+          "fact_trips": {
+            "rows": 3076850,
+            "distinct_keys": 3076850
+          },
+          "quarantine_trips": {
+            "rows": 53,
+            "distinct_keys": 53
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-08.parquet",
+        "seconds": 16.58,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-08.parquet",
+          "fact_trips": {
+            "rows": 2979123,
+            "distinct_keys": 2979123
+          },
+          "quarantine_trips": {
+            "rows": 60,
+            "distinct_keys": 60
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-09.parquet",
+        "seconds": 18.53,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-09.parquet",
+          "fact_trips": {
+            "rows": 3632936,
+            "distinct_keys": 3632936
+          },
+          "quarantine_trips": {
+            "rows": 94,
+            "distinct_keys": 94
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-10.parquet",
+        "seconds": 19.0,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-10.parquet",
+          "fact_trips": {
+            "rows": 3833690,
+            "distinct_keys": 3833690
+          },
+          "quarantine_trips": {
+            "rows": 81,
+            "distinct_keys": 81
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-11.parquet",
+        "seconds": 18.5,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-11.parquet",
+          "fact_trips": {
+            "rows": 3645241,
+            "distinct_keys": 3645241
+          },
+          "quarantine_trips": {
+            "rows": 1128,
+            "distinct_keys": 1128
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2024-12.parquet",
+        "seconds": 18.1,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2024-12.parquet",
+          "fact_trips": {
+            "rows": 3668238,
+            "distinct_keys": 3668238
+          },
+          "quarantine_trips": {
+            "rows": 133,
+            "distinct_keys": 133
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-01.parquet",
+        "seconds": 18.44,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-01.parquet",
+          "fact_trips": {
+            "rows": 3475080,
+            "distinct_keys": 3475080
+          },
+          "quarantine_trips": {
+            "rows": 146,
+            "distinct_keys": 146
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-02.parquet",
+        "seconds": 18.87,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-02.parquet",
+          "fact_trips": {
+            "rows": 3577419,
+            "distinct_keys": 3577419
+          },
+          "quarantine_trips": {
+            "rows": 124,
+            "distinct_keys": 124
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-03.parquet",
+        "seconds": 20.42,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-03.parquet",
+          "fact_trips": {
+            "rows": 4145143,
+            "distinct_keys": 4145143
+          },
+          "quarantine_trips": {
+            "rows": 114,
+            "distinct_keys": 114
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-04.parquet",
+        "seconds": 19.45,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-04.parquet",
+          "fact_trips": {
+            "rows": 3970383,
+            "distinct_keys": 3970383
+          },
+          "quarantine_trips": {
+            "rows": 170,
+            "distinct_keys": 170
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-05.parquet",
+        "seconds": 21.58,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-05.parquet",
+          "fact_trips": {
+            "rows": 4591720,
+            "distinct_keys": 4591720
+          },
+          "quarantine_trips": {
+            "rows": 125,
+            "distinct_keys": 125
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-06.parquet",
+        "seconds": 21.1,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-06.parquet",
+          "fact_trips": {
+            "rows": 4322709,
+            "distinct_keys": 4322709
+          },
+          "quarantine_trips": {
+            "rows": 251,
+            "distinct_keys": 251
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-07.parquet",
+        "seconds": 20.68,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-07.parquet",
+          "fact_trips": {
+            "rows": 3898954,
+            "distinct_keys": 3898954
+          },
+          "quarantine_trips": {
+            "rows": 9,
+            "distinct_keys": 9
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-08.parquet",
+        "seconds": 32.82,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-08.parquet",
+          "fact_trips": {
+            "rows": 3574072,
+            "distinct_keys": 3574072
+          },
+          "quarantine_trips": {
+            "rows": 19,
+            "distinct_keys": 19
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-09.parquet",
+        "seconds": 17.93,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-09.parquet",
+          "fact_trips": {
+            "rows": 4251008,
+            "distinct_keys": 4251008
+          },
+          "quarantine_trips": {
+            "rows": 7,
+            "distinct_keys": 7
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-10.parquet",
+        "seconds": 21.81,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-10.parquet",
+          "fact_trips": {
+            "rows": 4428684,
+            "distinct_keys": 4428684
+          },
+          "quarantine_trips": {
+            "rows": 15,
+            "distinct_keys": 15
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-11.parquet",
+        "seconds": 21.68,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-11.parquet",
+          "fact_trips": {
+            "rows": 4179985,
+            "distinct_keys": 4179985
+          },
+          "quarantine_trips": {
+            "rows": 1459,
+            "distinct_keys": 1459
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2025-12.parquet",
+        "seconds": 21.83,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2025-12.parquet",
+          "fact_trips": {
+            "rows": 4304995,
+            "distinct_keys": 4304995
+          },
+          "quarantine_trips": {
+            "rows": 11,
+            "distinct_keys": 11
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2026-01.parquet",
+        "seconds": 19.31,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2026-01.parquet",
+          "fact_trips": {
+            "rows": 3724881,
+            "distinct_keys": 3724881
+          },
+          "quarantine_trips": {
+            "rows": 8,
+            "distinct_keys": 8
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2026-02.parquet",
+        "seconds": 18.1,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2026-02.parquet",
+          "fact_trips": {
+            "rows": 3399848,
+            "distinct_keys": 3399848
+          },
+          "quarantine_trips": {
+            "rows": 18,
+            "distinct_keys": 18
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2026-03.parquet",
+        "seconds": 19.96,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2026-03.parquet",
+          "fact_trips": {
+            "rows": 3952430,
+            "distinct_keys": 3952430
+          },
+          "quarantine_trips": {
+            "rows": 21,
+            "distinct_keys": 21
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2026-04.parquet",
+        "seconds": 19.5,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2026-04.parquet",
+          "fact_trips": {
+            "rows": 3831228,
+            "distinct_keys": 3831228
+          },
+          "quarantine_trips": {
+            "rows": 12,
+            "distinct_keys": 12
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2026-05.parquet",
+        "seconds": 21.15,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2026-05.parquet",
+          "fact_trips": {
+            "rows": 4090822,
+            "distinct_keys": 4090822
+          },
+          "quarantine_trips": {
+            "rows": 14,
+            "distinct_keys": 14
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2026-06.parquet",
+        "seconds": 19.52,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2026-06.parquet",
+          "fact_trips": {
+            "rows": 3837230,
+            "distinct_keys": 3837230
+          },
+          "quarantine_trips": {
+            "rows": 18,
+            "distinct_keys": 18
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2026-07.parquet",
+        "seconds": 19.57,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2026-07.parquet",
+          "fact_trips": {
+            "rows": 3530062,
+            "distinct_keys": 3530062
+          },
+          "quarantine_trips": {
+            "rows": 47,
+            "distinct_keys": 47
+          },
+          "ok": true
+        }
+      },
+      {
+        "file": "yellow_tripdata_2026-08.parquet",
+        "seconds": 17.29,
+        "ok": true,
+        "integrity": {
+          "file": "yellow_tripdata_2026-08.parquet",
+          "fact_trips": {
+            "rows": 3336691,
+            "distinct_keys": 3336691
+          },
+          "quarantine_trips": {
+            "rows": 25,
+            "distinct_keys": 25
+          },
+          "ok": true
+        }
+      }
+    ],
+    "final_build": {
+      "pass": 26,
+      "warn": 0,
+      "error": 0,
+      "skip": 0,
+      "no-op": 0,
+      "reused": 0,
+      "total": 26,
+      "returncode": 0
+    },
+    "incremental_tests": {
+      "pass": 16,
+      "warn": 1,
+      "error": 0,
+      "skip": 0,
+      "no-op": 0,
+      "reused": 0,
+      "total": 17,
+      "returncode": 0
+    }
+  },
+  "quality": {
+    "layers": {
+      "parquet_metadata (sum of footers)": 197562001,
+      "raw_view": 197562001,
+      "source rows seen by validation": 197562001,
+      "valid": 197539104,
+      "quarantined (recon mart)": 22897,
+      "quarantine_trips (table)": 22897,
+      "fact_trips (table)": 197539104
+    },
+    "checks": {
+      "raw view rows == sum of Parquet footers": true,
+      "validation saw every source row": true,
+      "per-file source rows == per-file Parquet footer rows": true,
+      "source == valid + quarantined": true,
+      "valid == fact_trips": true,
+      "quarantined == quarantine_trips table": true,
+      "trip_record_key unique within every file (fact and quarantine)": true,
+      "every manifest file loaded": true
+    },
+    "per_file": [
+      {
+        "source_file": "yellow_tripdata_2022-01.parquet",
+        "source_period": "2022-01",
+        "source_rows": 2463931,
+        "valid_rows": 2462526.0,
+        "quarantined_rows": 1405.0,
+        "fact_rows": 2462526,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 12733.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1353.0,
+        "pickup_outside_period_rows": 52.0,
+        "quarantine_pct": 0.057,
+        "parquet_metadata_rows": 2463931
+      },
+      {
+        "source_file": "yellow_tripdata_2022-02.parquet",
+        "source_period": "2022-02",
+        "source_rows": 2979431,
+        "valid_rows": 2977818.0,
+        "quarantined_rows": 1613.0,
+        "fact_rows": 2977818,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 15386.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1549.0,
+        "pickup_outside_period_rows": 64.0,
+        "quarantine_pct": 0.0541,
+        "parquet_metadata_rows": 2979431
+      },
+      {
+        "source_file": "yellow_tripdata_2022-03.parquet",
+        "source_period": "2022-03",
+        "source_rows": 3627882,
+        "valid_rows": 3626010.0,
+        "quarantined_rows": 1872.0,
+        "fact_rows": 3626010,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 19813.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1783.0,
+        "pickup_outside_period_rows": 89.0,
+        "quarantine_pct": 0.0516,
+        "parquet_metadata_rows": 3627882
+      },
+      {
+        "source_file": "yellow_tripdata_2022-04.parquet",
+        "source_period": "2022-04",
+        "source_rows": 3599920,
+        "valid_rows": 3598101.0,
+        "quarantined_rows": 1819.0,
+        "fact_rows": 3598101,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 19294.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1661.0,
+        "pickup_outside_period_rows": 158.0,
+        "quarantine_pct": 0.0505,
+        "parquet_metadata_rows": 3599920
+      },
+      {
+        "source_file": "yellow_tripdata_2022-05.parquet",
+        "source_period": "2022-05",
+        "source_rows": 3588295,
+        "valid_rows": 3586884.0,
+        "quarantined_rows": 1411.0,
+        "fact_rows": 3586884,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 20506.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1268.0,
+        "pickup_outside_period_rows": 143.0,
+        "quarantine_pct": 0.0393,
+        "parquet_metadata_rows": 3588295
+      },
+      {
+        "source_file": "yellow_tripdata_2022-06.parquet",
+        "source_period": "2022-06",
+        "source_rows": 3558124,
+        "valid_rows": 3556391.0,
+        "quarantined_rows": 1733.0,
+        "fact_rows": 3556391,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 22399.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1221.0,
+        "pickup_outside_period_rows": 512.0,
+        "quarantine_pct": 0.0487,
+        "parquet_metadata_rows": 3558124
+      },
+      {
+        "source_file": "yellow_tripdata_2022-07.parquet",
+        "source_period": "2022-07",
+        "source_rows": 3174394,
+        "valid_rows": 3173051.0,
+        "quarantined_rows": 1343.0,
+        "fact_rows": 3173051,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 21295.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1261.0,
+        "pickup_outside_period_rows": 82.0,
+        "quarantine_pct": 0.0423,
+        "parquet_metadata_rows": 3174394
+      },
+      {
+        "source_file": "yellow_tripdata_2022-08.parquet",
+        "source_period": "2022-08",
+        "source_rows": 3152677,
+        "valid_rows": 3151767.0,
+        "quarantined_rows": 910.0,
+        "fact_rows": 3151767,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 22249.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 857.0,
+        "pickup_outside_period_rows": 53.0,
+        "quarantine_pct": 0.0289,
+        "parquet_metadata_rows": 3152677
+      },
+      {
+        "source_file": "yellow_tripdata_2022-09.parquet",
+        "source_period": "2022-09",
+        "source_rows": 3183767,
+        "valid_rows": 3183688.0,
+        "quarantined_rows": 79.0,
+        "fact_rows": 3183688,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 21240.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 2.0,
+        "pickup_outside_period_rows": 77.0,
+        "quarantine_pct": 0.0025,
+        "parquet_metadata_rows": 3183767
+      },
+      {
+        "source_file": "yellow_tripdata_2022-10.parquet",
+        "source_period": "2022-10",
+        "source_rows": 3675411,
+        "valid_rows": 3674326.0,
+        "quarantined_rows": 1085.0,
+        "fact_rows": 3674326,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 25899.0,
+        "exact_duplicate_rows": 1.0,
+        "dropoff_before_pickup_rows": 993.0,
+        "pickup_outside_period_rows": 91.0,
+        "quarantine_pct": 0.0295,
+        "parquet_metadata_rows": 3675411
+      },
+      {
+        "source_file": "yellow_tripdata_2022-11.parquet",
+        "source_period": "2022-11",
+        "source_rows": 3252717,
+        "valid_rows": 3251059.0,
+        "quarantined_rows": 1658.0,
+        "fact_rows": 3251059,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 24769.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1561.0,
+        "pickup_outside_period_rows": 97.0,
+        "quarantine_pct": 0.051,
+        "parquet_metadata_rows": 3252717
+      },
+      {
+        "source_file": "yellow_tripdata_2022-12.parquet",
+        "source_period": "2022-12",
+        "source_rows": 3399549,
+        "valid_rows": 3399399.0,
+        "quarantined_rows": 150.0,
+        "fact_rows": 3399399,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 27292.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 104.0,
+        "pickup_outside_period_rows": 46.0,
+        "quarantine_pct": 0.0044,
+        "parquet_metadata_rows": 3399549
+      },
+      {
+        "source_file": "yellow_tripdata_2023-01.parquet",
+        "source_period": "2023-01",
+        "source_rows": 3066766,
+        "valid_rows": 3066715.0,
+        "quarantined_rows": 51.0,
+        "fact_rows": 3066715,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 25049.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 3.0,
+        "pickup_outside_period_rows": 48.0,
+        "quarantine_pct": 0.0017,
+        "parquet_metadata_rows": 3066766
+      },
+      {
+        "source_file": "yellow_tripdata_2023-02.parquet",
+        "source_period": "2023-02",
+        "source_rows": 2913955,
+        "valid_rows": 2913624.0,
+        "quarantined_rows": 331.0,
+        "fact_rows": 2913624,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 24764.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 276.0,
+        "pickup_outside_period_rows": 55.0,
+        "quarantine_pct": 0.0114,
+        "parquet_metadata_rows": 2913955
+      },
+      {
+        "source_file": "yellow_tripdata_2023-03.parquet",
+        "source_period": "2023-03",
+        "source_rows": 3403766,
+        "valid_rows": 3403220.0,
+        "quarantined_rows": 546.0,
+        "fact_rows": 3403220,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 29674.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 357.0,
+        "pickup_outside_period_rows": 189.0,
+        "quarantine_pct": 0.016,
+        "parquet_metadata_rows": 3403766
+      },
+      {
+        "source_file": "yellow_tripdata_2023-04.parquet",
+        "source_period": "2023-04",
+        "source_rows": 3288250,
+        "valid_rows": 3288064.0,
+        "quarantined_rows": 186.0,
+        "fact_rows": 3288064,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 29988.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 91.0,
+        "pickup_outside_period_rows": 95.0,
+        "quarantine_pct": 0.0057,
+        "parquet_metadata_rows": 3288250
+      },
+      {
+        "source_file": "yellow_tripdata_2023-05.parquet",
+        "source_period": "2023-05",
+        "source_rows": 3513649,
+        "valid_rows": 3513531.0,
+        "quarantined_rows": 118.0,
+        "fact_rows": 3513531,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 32100.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 68.0,
+        "pickup_outside_period_rows": 50.0,
+        "quarantine_pct": 0.0034,
+        "parquet_metadata_rows": 3513649
+      },
+      {
+        "source_file": "yellow_tripdata_2023-06.parquet",
+        "source_period": "2023-06",
+        "source_rows": 3307234,
+        "valid_rows": 3307004.0,
+        "quarantined_rows": 230.0,
+        "fact_rows": 3307004,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 31437.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 189.0,
+        "pickup_outside_period_rows": 41.0,
+        "quarantine_pct": 0.007,
+        "parquet_metadata_rows": 3307234
+      },
+      {
+        "source_file": "yellow_tripdata_2023-07.parquet",
+        "source_period": "2023-07",
+        "source_rows": 2907108,
+        "valid_rows": 2906887.0,
+        "quarantined_rows": 221.0,
+        "fact_rows": 2906887,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 31160.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 162.0,
+        "pickup_outside_period_rows": 59.0,
+        "quarantine_pct": 0.0076,
+        "parquet_metadata_rows": 2907108
+      },
+      {
+        "source_file": "yellow_tripdata_2023-08.parquet",
+        "source_period": "2023-08",
+        "source_rows": 2824209,
+        "valid_rows": 2824029.0,
+        "quarantined_rows": 180.0,
+        "fact_rows": 2824029,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 31308.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 146.0,
+        "pickup_outside_period_rows": 34.0,
+        "quarantine_pct": 0.0064,
+        "parquet_metadata_rows": 2824209
+      },
+      {
+        "source_file": "yellow_tripdata_2023-09.parquet",
+        "source_period": "2023-09",
+        "source_rows": 2846722,
+        "valid_rows": 2846544.0,
+        "quarantined_rows": 178.0,
+        "fact_rows": 2846544,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 29565.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 146.0,
+        "pickup_outside_period_rows": 32.0,
+        "quarantine_pct": 0.0063,
+        "parquet_metadata_rows": 2846722
+      },
+      {
+        "source_file": "yellow_tripdata_2023-10.parquet",
+        "source_period": "2023-10",
+        "source_rows": 3522285,
+        "valid_rows": 3522147.0,
+        "quarantined_rows": 138.0,
+        "fact_rows": 3522147,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 37099.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 85.0,
+        "pickup_outside_period_rows": 53.0,
+        "quarantine_pct": 0.0039,
+        "parquet_metadata_rows": 3522285
+      },
+      {
+        "source_file": "yellow_tripdata_2023-11.parquet",
+        "source_period": "2023-11",
+        "source_rows": 3339715,
+        "valid_rows": 3338797.0,
+        "quarantined_rows": 918.0,
+        "fact_rows": 3338797,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 36848.0,
+        "exact_duplicate_rows": 2.0,
+        "dropoff_before_pickup_rows": 885.0,
+        "pickup_outside_period_rows": 31.0,
+        "quarantine_pct": 0.0275,
+        "parquet_metadata_rows": 3339715
+      },
+      {
+        "source_file": "yellow_tripdata_2023-12.parquet",
+        "source_period": "2023-12",
+        "source_rows": 3376567,
+        "valid_rows": 3376457.0,
+        "quarantined_rows": 110.0,
+        "fact_rows": 3376457,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 42642.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 67.0,
+        "pickup_outside_period_rows": 43.0,
+        "quarantine_pct": 0.0033,
+        "parquet_metadata_rows": 3376567
+      },
+      {
+        "source_file": "yellow_tripdata_2024-01.parquet",
+        "source_period": "2024-01",
+        "source_rows": 2964624,
+        "valid_rows": 2964550.0,
+        "quarantined_rows": 74.0,
+        "fact_rows": 2964550,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 37447.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 56.0,
+        "pickup_outside_period_rows": 18.0,
+        "quarantine_pct": 0.0025,
+        "parquet_metadata_rows": 2964624
+      },
+      {
+        "source_file": "yellow_tripdata_2024-02.parquet",
+        "source_period": "2024-02",
+        "source_rows": 3007526,
+        "valid_rows": 3007503.0,
+        "quarantined_rows": 23.0,
+        "fact_rows": 3007503,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 40654.0,
+        "exact_duplicate_rows": 1.0,
+        "dropoff_before_pickup_rows": 7.0,
+        "pickup_outside_period_rows": 15.0,
+        "quarantine_pct": 0.0008,
+        "parquet_metadata_rows": 3007526
+      },
+      {
+        "source_file": "yellow_tripdata_2024-03.parquet",
+        "source_period": "2024-03",
+        "source_rows": 3582628,
+        "valid_rows": 3582488.0,
+        "quarantined_rows": 140.0,
+        "fact_rows": 3582488,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 58464.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 117.0,
+        "pickup_outside_period_rows": 23.0,
+        "quarantine_pct": 0.0039,
+        "parquet_metadata_rows": 3582628
+      },
+      {
+        "source_file": "yellow_tripdata_2024-04.parquet",
+        "source_period": "2024-04",
+        "source_rows": 3514289,
+        "valid_rows": 3514210.0,
+        "quarantined_rows": 79.0,
+        "fact_rows": 3514210,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 57568.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 70.0,
+        "pickup_outside_period_rows": 9.0,
+        "quarantine_pct": 0.0022,
+        "parquet_metadata_rows": 3514289
+      },
+      {
+        "source_file": "yellow_tripdata_2024-05.parquet",
+        "source_period": "2024-05",
+        "source_rows": 3723833,
+        "valid_rows": 3723758.0,
+        "quarantined_rows": 75.0,
+        "fact_rows": 3723758,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 59947.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 42.0,
+        "pickup_outside_period_rows": 33.0,
+        "quarantine_pct": 0.002,
+        "parquet_metadata_rows": 3723833
+      },
+      {
+        "source_file": "yellow_tripdata_2024-06.parquet",
+        "source_period": "2024-06",
+        "source_rows": 3539193,
+        "valid_rows": 3539134.0,
+        "quarantined_rows": 59.0,
+        "fact_rows": 3539134,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 61664.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 8.0,
+        "pickup_outside_period_rows": 51.0,
+        "quarantine_pct": 0.0017,
+        "parquet_metadata_rows": 3539193
+      },
+      {
+        "source_file": "yellow_tripdata_2024-07.parquet",
+        "source_period": "2024-07",
+        "source_rows": 3076903,
+        "valid_rows": 3076850.0,
+        "quarantined_rows": 53.0,
+        "fact_rows": 3076850,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 58650.0,
+        "exact_duplicate_rows": 1.0,
+        "dropoff_before_pickup_rows": 5.0,
+        "pickup_outside_period_rows": 47.0,
+        "quarantine_pct": 0.0017,
+        "parquet_metadata_rows": 3076903
+      },
+      {
+        "source_file": "yellow_tripdata_2024-08.parquet",
+        "source_period": "2024-08",
+        "source_rows": 2979183,
+        "valid_rows": 2979123.0,
+        "quarantined_rows": 60.0,
+        "fact_rows": 2979123,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 58252.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 9.0,
+        "pickup_outside_period_rows": 51.0,
+        "quarantine_pct": 0.002,
+        "parquet_metadata_rows": 2979183
+      },
+      {
+        "source_file": "yellow_tripdata_2024-09.parquet",
+        "source_period": "2024-09",
+        "source_rows": 3633030,
+        "valid_rows": 3632936.0,
+        "quarantined_rows": 94.0,
+        "fact_rows": 3632936,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 73083.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 45.0,
+        "pickup_outside_period_rows": 49.0,
+        "quarantine_pct": 0.0026,
+        "parquet_metadata_rows": 3633030
+      },
+      {
+        "source_file": "yellow_tripdata_2024-10.parquet",
+        "source_period": "2024-10",
+        "source_rows": 3833771,
+        "valid_rows": 3833690.0,
+        "quarantined_rows": 81.0,
+        "fact_rows": 3833690,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 75377.0,
+        "exact_duplicate_rows": 2.0,
+        "dropoff_before_pickup_rows": 39.0,
+        "pickup_outside_period_rows": 40.0,
+        "quarantine_pct": 0.0021,
+        "parquet_metadata_rows": 3833771
+      },
+      {
+        "source_file": "yellow_tripdata_2024-11.parquet",
+        "source_period": "2024-11",
+        "source_rows": 3646369,
+        "valid_rows": 3645241.0,
+        "quarantined_rows": 1128.0,
+        "fact_rows": 3645241,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 71453.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1078.0,
+        "pickup_outside_period_rows": 50.0,
+        "quarantine_pct": 0.0309,
+        "parquet_metadata_rows": 3646369
+      },
+      {
+        "source_file": "yellow_tripdata_2024-12.parquet",
+        "source_period": "2024-12",
+        "source_rows": 3668371,
+        "valid_rows": 3668238.0,
+        "quarantined_rows": 133.0,
+        "fact_rows": 3668238,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 78444.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 99.0,
+        "pickup_outside_period_rows": 34.0,
+        "quarantine_pct": 0.0036,
+        "parquet_metadata_rows": 3668371
+      },
+      {
+        "source_file": "yellow_tripdata_2025-01.parquet",
+        "source_period": "2025-01",
+        "source_rows": 3475226,
+        "valid_rows": 3475080.0,
+        "quarantined_rows": 146.0,
+        "fact_rows": 3475080,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 144118.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 124.0,
+        "pickup_outside_period_rows": 22.0,
+        "quarantine_pct": 0.0042,
+        "parquet_metadata_rows": 3475226
+      },
+      {
+        "source_file": "yellow_tripdata_2025-02.parquet",
+        "source_period": "2025-02",
+        "source_rows": 3577543,
+        "valid_rows": 3577419.0,
+        "quarantined_rows": 124.0,
+        "fact_rows": 3577419,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 182655.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 93.0,
+        "pickup_outside_period_rows": 31.0,
+        "quarantine_pct": 0.0035,
+        "parquet_metadata_rows": 3577543
+      },
+      {
+        "source_file": "yellow_tripdata_2025-03.parquet",
+        "source_period": "2025-03",
+        "source_rows": 4145257,
+        "valid_rows": 4145143.0,
+        "quarantined_rows": 114.0,
+        "fact_rows": 4145143,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 208724.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 81.0,
+        "pickup_outside_period_rows": 33.0,
+        "quarantine_pct": 0.0028,
+        "parquet_metadata_rows": 4145257
+      },
+      {
+        "source_file": "yellow_tripdata_2025-04.parquet",
+        "source_period": "2025-04",
+        "source_rows": 3970553,
+        "valid_rows": 3970383.0,
+        "quarantined_rows": 170.0,
+        "fact_rows": 3970383,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 186720.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 163.0,
+        "pickup_outside_period_rows": 7.0,
+        "quarantine_pct": 0.0043,
+        "parquet_metadata_rows": 3970553
+      },
+      {
+        "source_file": "yellow_tripdata_2025-05.parquet",
+        "source_period": "2025-05",
+        "source_rows": 4591845,
+        "valid_rows": 4591720.0,
+        "quarantined_rows": 125.0,
+        "fact_rows": 4591720,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 325266.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 101.0,
+        "pickup_outside_period_rows": 24.0,
+        "quarantine_pct": 0.0027,
+        "parquet_metadata_rows": 4591845
+      },
+      {
+        "source_file": "yellow_tripdata_2025-06.parquet",
+        "source_period": "2025-06",
+        "source_rows": 4322960,
+        "valid_rows": 4322709.0,
+        "quarantined_rows": 251.0,
+        "fact_rows": 4322709,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 275564.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 231.0,
+        "pickup_outside_period_rows": 20.0,
+        "quarantine_pct": 0.0058,
+        "parquet_metadata_rows": 4322960
+      },
+      {
+        "source_file": "yellow_tripdata_2025-07.parquet",
+        "source_period": "2025-07",
+        "source_rows": 3898963,
+        "valid_rows": 3898954.0,
+        "quarantined_rows": 9.0,
+        "fact_rows": 3898954,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 247088.0,
+        "exact_duplicate_rows": 1.0,
+        "dropoff_before_pickup_rows": 1.0,
+        "pickup_outside_period_rows": 7.0,
+        "quarantine_pct": 0.0002,
+        "parquet_metadata_rows": 3898963
+      },
+      {
+        "source_file": "yellow_tripdata_2025-08.parquet",
+        "source_period": "2025-08",
+        "source_rows": 3574091,
+        "valid_rows": 3574072.0,
+        "quarantined_rows": 19.0,
+        "fact_rows": 3574072,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 261190.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 2.0,
+        "pickup_outside_period_rows": 17.0,
+        "quarantine_pct": 0.0005,
+        "parquet_metadata_rows": 3574091
+      },
+      {
+        "source_file": "yellow_tripdata_2025-09.parquet",
+        "source_period": "2025-09",
+        "source_rows": 4251015,
+        "valid_rows": 4251008.0,
+        "quarantined_rows": 7.0,
+        "fact_rows": 4251008,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 252718.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 7.0,
+        "quarantine_pct": 0.0002,
+        "parquet_metadata_rows": 4251015
+      },
+      {
+        "source_file": "yellow_tripdata_2025-10.parquet",
+        "source_period": "2025-10",
+        "source_rows": 4428699,
+        "valid_rows": 4428684.0,
+        "quarantined_rows": 15.0,
+        "fact_rows": 4428684,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 321307.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 2.0,
+        "pickup_outside_period_rows": 13.0,
+        "quarantine_pct": 0.0003,
+        "parquet_metadata_rows": 4428699
+      },
+      {
+        "source_file": "yellow_tripdata_2025-11.parquet",
+        "source_period": "2025-11",
+        "source_rows": 4181444,
+        "valid_rows": 4179985.0,
+        "quarantined_rows": 1459.0,
+        "fact_rows": 4179985,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 394999.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1435.0,
+        "pickup_outside_period_rows": 24.0,
+        "quarantine_pct": 0.0349,
+        "parquet_metadata_rows": 4181444
+      },
+      {
+        "source_file": "yellow_tripdata_2025-12.parquet",
+        "source_period": "2025-12",
+        "source_rows": 4305006,
+        "valid_rows": 4304995.0,
+        "quarantined_rows": 11.0,
+        "fact_rows": 4304995,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 48175.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 2.0,
+        "pickup_outside_period_rows": 9.0,
+        "quarantine_pct": 0.0003,
+        "parquet_metadata_rows": 4305006
+      },
+      {
+        "source_file": "yellow_tripdata_2026-01.parquet",
+        "source_period": "2026-01",
+        "source_rows": 3724889,
+        "valid_rows": 3724881.0,
+        "quarantined_rows": 8.0,
+        "fact_rows": 3724881,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 39462.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1.0,
+        "pickup_outside_period_rows": 7.0,
+        "quarantine_pct": 0.0002,
+        "parquet_metadata_rows": 3724889
+      },
+      {
+        "source_file": "yellow_tripdata_2026-02.parquet",
+        "source_period": "2026-02",
+        "source_rows": 3399866,
+        "valid_rows": 3399848.0,
+        "quarantined_rows": 18.0,
+        "fact_rows": 3399848,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 26720.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 2.0,
+        "pickup_outside_period_rows": 16.0,
+        "quarantine_pct": 0.0005,
+        "parquet_metadata_rows": 3399866
+      },
+      {
+        "source_file": "yellow_tripdata_2026-03.parquet",
+        "source_period": "2026-03",
+        "source_rows": 3952451,
+        "valid_rows": 3952430.0,
+        "quarantined_rows": 21.0,
+        "fact_rows": 3952430,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 20724.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 2.0,
+        "pickup_outside_period_rows": 19.0,
+        "quarantine_pct": 0.0005,
+        "parquet_metadata_rows": 3952451
+      },
+      {
+        "source_file": "yellow_tripdata_2026-04.parquet",
+        "source_period": "2026-04",
+        "source_rows": 3831240,
+        "valid_rows": 3831228.0,
+        "quarantined_rows": 12.0,
+        "fact_rows": 3831228,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 14328.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 12.0,
+        "quarantine_pct": 0.0003,
+        "parquet_metadata_rows": 3831240
+      },
+      {
+        "source_file": "yellow_tripdata_2026-05.parquet",
+        "source_period": "2026-05",
+        "source_rows": 4090836,
+        "valid_rows": 4090822.0,
+        "quarantined_rows": 14.0,
+        "fact_rows": 4090822,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 14231.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 0.0,
+        "pickup_outside_period_rows": 14.0,
+        "quarantine_pct": 0.0003,
+        "parquet_metadata_rows": 4090836
+      },
+      {
+        "source_file": "yellow_tripdata_2026-06.parquet",
+        "source_period": "2026-06",
+        "source_rows": 3837248,
+        "valid_rows": 3837230.0,
+        "quarantined_rows": 18.0,
+        "fact_rows": 3837230,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 13646.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1.0,
+        "pickup_outside_period_rows": 17.0,
+        "quarantine_pct": 0.0005,
+        "parquet_metadata_rows": 3837248
+      },
+      {
+        "source_file": "yellow_tripdata_2026-07.parquet",
+        "source_period": "2026-07",
+        "source_rows": 3530109,
+        "valid_rows": 3530062.0,
+        "quarantined_rows": 47.0,
+        "fact_rows": 3530062,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 14199.0,
+        "exact_duplicate_rows": 0.0,
+        "dropoff_before_pickup_rows": 1.0,
+        "pickup_outside_period_rows": 46.0,
+        "quarantine_pct": 0.0013,
+        "parquet_metadata_rows": 3530109
+      },
+      {
+        "source_file": "yellow_tripdata_2026-08.parquet",
+        "source_period": "2026-08",
+        "source_rows": 3336716,
+        "valid_rows": 3336691.0,
+        "quarantined_rows": 25.0,
+        "fact_rows": 3336691,
+        "unmapped_pickup_rows": 0.0,
+        "negative_distance_rows": 0.0,
+        "negative_fare_rows": 14049.0,
+        "exact_duplicate_rows": 7.0,
+        "dropoff_before_pickup_rows": 3.0,
+        "pickup_outside_period_rows": 15.0,
+        "quarantine_pct": 0.0007,
+        "parquet_metadata_rows": 3336716
+      }
+    ],
+    "quarantine_reasons": [
+      {
+        "quarantine_reason": "dropoff_before_pickup",
+        "n": 19908
+      },
+      {
+        "quarantine_reason": "pickup_outside_file_period",
+        "n": 2974
+      },
+      {
+        "quarantine_reason": "exact_duplicate_row",
+        "n": 15
+      }
+    ],
+    "by_year": [
+      {
+        "year": "2022",
+        "source_rows": 39656098.0,
+        "quarantined": 15078.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 252875.0,
+        "negative_distance": 0.0
+      },
+      {
+        "year": "2023",
+        "source_rows": 38310226.0,
+        "quarantined": 3207.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 381634.0,
+        "negative_distance": 0.0
+      },
+      {
+        "year": "2024",
+        "source_rows": 41169720.0,
+        "quarantined": 1999.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 731003.0,
+        "negative_distance": 0.0
+      },
+      {
+        "year": "2025",
+        "source_rows": 48722602.0,
+        "quarantined": 2450.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 2848524.0,
+        "negative_distance": 0.0
+      },
+      {
+        "year": "2026",
+        "source_rows": 29703355.0,
+        "quarantined": 163.0,
+        "unmapped_pickup": 0.0,
+        "negative_fare": 157359.0,
+        "negative_distance": 0.0
+      }
+    ],
+    "cbd_fee_coverage": [
+      {
+        "year": "2022",
+        "rows": 39641020,
+        "non_null_cbd": 0
+      },
+      {
+        "year": "2023",
+        "rows": 38307019,
+        "non_null_cbd": 0
+      },
+      {
+        "year": "2024",
+        "rows": 41167721,
+        "non_null_cbd": 0
+      },
+      {
+        "year": "2025",
+        "rows": 48720152,
+        "non_null_cbd": 48720152
+      },
+      {
+        "year": "2026",
+        "rows": 29703192,
+        "non_null_cbd": 29703192
+      }
+    ],
+    "pickup_range": {
+      "min_pickup": "2022-01-01 00:00:00",
+      "max_pickup": "2026-09-01 00:00:00"
+    }
+  }
+}

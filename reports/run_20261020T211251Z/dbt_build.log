@@ -1,0 +1,39 @@
+ .................... [OK in 5.72s]
+21:32:27  22 of 26 START sql table model main.mart_zone_performance ...................... [RUN]
+21:32:38  20 of 26 OK created sql table model main.mart_daily_operations ................. [OK in 16.71s]
+21:32:38  23 of 26 START test dbt_utils_free_unique_grain_mart_hourly_demand_trip_date__pickup_hour  [RUN]
+21:32:38  23 of 26 PASS dbt_utils_free_unique_grain_mart_hourly_demand_trip_date__pickup_hour  [PASS in 0.11s]
+21:32:38  24 of 26 START test dbt_utils_free_unique_grain_mart_daily_operations_trip_date__pickup_zone_key  [RUN]
+21:32:38  24 of 26 PASS dbt_utils_free_unique_grain_mart_daily_operations_trip_date__pickup_zone_key  [PASS in 0.15s]
+21:32:38  25 of 26 START test not_null_mart_daily_operations_trip_count .................. [RUN]
+21:32:38  25 of 26 PASS not_null_mart_daily_operations_trip_count ........................ [PASS in 0.04s]
+21:32:41  22 of 26 OK created sql table model main.mart_zone_performance ................. [OK in 14.09s]
+21:32:41  26 of 26 START test dbt_utils_free_unique_grain_mart_zone_performance_trip_month__pickup_zone_key  [RUN]
+21:32:41  26 of 26 PASS dbt_utils_free_unique_grain_mart_zone_performance_trip_month__pickup_zone_key  [PASS in 0.03s]
+21:32:41  
+21:32:41  Finished running 1 seed, 6 table models, 15 data tests, 4 view models in 0 hours 0 minutes and 23.34 seconds (23.34s).
+21:32:41  
+21:32:41  Completed successfully
+21:32:41  
+21:32:41  Done. PASS=26 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=26
+relationships_fact_trips_pickup_zone_key__zone_key__ref_dim_zone_  [RUN]
+21:32:52  13 of 17 PASS relationships_fact_trips_pickup_datetime_key__datetime_key__ref_dim_datetime_  [PASS in 1.92s]
+21:32:52  15 of 17 START test unique_mart_quality_reconciliation_source_file ............. [RUN]
+21:32:52  15 of 17 PASS unique_mart_quality_reconciliation_source_file ................... [PASS in 0.05s]
+21:32:52  16 of 17 START test warn_negative_amounts ...................................... [RUN]
+21:32:52  16 of 17 WARN 56 warn_negative_amounts ......................................... [WARN 56 in 0.03s]
+21:32:52  17 of 17 START test warn_unmapped_pickup_zone .................................. [RUN]
+21:32:52  17 of 17 PASS warn_unmapped_pickup_zone ........................................ [PASS in 0.03s]
+21:32:53  14 of 17 PASS relationships_fact_trips_pickup_zone_key__zone_key__ref_dim_zone_  [PASS in 3.21s]
+21:32:53  
+21:32:53  Finished running 17 data tests in 0 hours 0 minutes and 5.78 seconds (5.78s).
+21:32:53  
+21:32:53  Completed with 1 warning:
+21:32:53  
+21:32:53  [WARNING]: in test warn_negative_amounts (tests\warn_negative_amounts.sql)
+21:32:53  [WARNING]: Got 56 results, configured to warn if != 0
+21:32:53  
+21:32:53    compiled code at D:\github\project 8\final_2010\analytics-engineering-data-warehouse\data\dbt_target\compiled\analytics_engineering_warehouse\tests\warn_negative_amounts.sql
+21:32:53  
+21:32:53  Done. PASS=16 WARN=1 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=17
+
