@@ -1,0 +1,45 @@
+contract_version: 1
+
+dataset:
+  name: nyc_yellow_taxi_trips
+  source: NYC TLC Trip Record Data
+  grain: one_source_record
+  file_format: parquet
+  reference_dictionary: Data Dictionary - Yellow Taxi Trip Records (2025-03-18)
+
+required_fields:
+  - tpep_pickup_datetime
+  - tpep_dropoff_datetime
+  - PULocationID
+  - DOLocationID
+
+# severity: error      -> pipeline stops / file is quarantined
+#           warning    -> recorded, pipeline continues
+#           quarantine -> bad rows are kept in quarantine_trips with a reason, never silently dropped
+quality_rules:
+  - id: valid_pickup_timestamp
+    severity: quarantine
+  - id: valid_dropoff_timestamp
+    severity: quarantine
+  - id: dropoff_not_before_pickup
+    severity: quarantine
+  - id: pickup_within_file_period
+    severity: quarantine
+  - id: exact_duplicate_row
+    severity: quarantine
+  - id: non_negative_trip_distance
+    severity: warning
+  - id: non_negative_fare_amount
+    severity: warning
+  - id: mapped_pickup_zone
+    severity: warning
+
+schema_evolution:
+  allow_additive_columns: true
+  unknown_columns: report
+  missing_required_columns: error
+
+known_changes:
+  - column: cbd_congestion_fee
+    effective: "2025-01"
+    note: "MTA Congestion Relief Zone fee, per TLC data dictionary 2025-03-18"
